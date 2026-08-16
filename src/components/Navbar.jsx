@@ -30,13 +30,15 @@ export default function Navbar() {
     <>
       <nav id="nav" className={`fixed top-4 left-0 right-0 z-50 ${scrolled ? "scrolled" : ""}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-          <Link
-            to="/"
-            className={`font-display text-2xl tracking-tight nav-logo ${
-              scrolled ? "text-ink" : "text-white"
-            }`}
-          >
-            ROTTH<span className="text-brand">E</span>M
+          <Link to="/" className="nav-logo flex items-center gap-3">
+            <img src="/assets/images/logo-mark.png" alt="" className="h-10 md:h-12" />
+            <span
+              className={`font-display text-2xl tracking-tight ${
+                scrolled ? "text-ink" : "text-white"
+              }`}
+            >
+              ROTTH<span className="text-brand">E</span>M
+            </span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8 text-sm font-semibold">

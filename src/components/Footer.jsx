@@ -8,7 +8,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 md:gap-8 mb-14">
           <div>
-            <div className="font-display text-white text-2xl mb-3">ROTTHEM</div>
+            <div className="flex items-center gap-3 mb-3">
+              <img src="/assets/images/logo-mark.png" alt="" className="h-10 md:h-12" />
+              <div className="font-display text-white text-2xl">ROTTHEM</div>
+            </div>
             <p className="text-white/55 text-sm leading-relaxed max-w-xs">
               Tradición napolitana hecha en Paraguay.
               <br />

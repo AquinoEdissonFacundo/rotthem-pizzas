@@ -56,9 +56,9 @@ export default function Hero() {
           ref={addLineRef}
           className="hero-line font-display text-white leading-[0.92] tracking-tight text-[16vw] md:text-[7vw] mb-6"
         >
-          NO ES SOLO
+          EL ARTE DE
           <br />
-          <span className="text-brand">PIZZA.</span>
+          <span className="text-brand">HACER PIZZA.</span>
         </h1>
 
         <p ref={addLineRef} className="hero-line text-white/70 text-base md:text-xl max-w-md mb-9">

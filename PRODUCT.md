@@ -42,7 +42,8 @@ Two differentiators, held with equal weight, neither subordinate to the other:
 
 - Name: Rotthem (stylized ROTTHEM in display type).
 - Founder and pizzero Rafa is named explicitly as the face of the brand ("Rafa · Fundador & pizzero"); he is a real person, not a placeholder persona.
-- Existing tagline, already shipped and treated as binding voice: "No es solo pizza."
+- Current tagline, shipped and treated as binding voice: "El arte de hacer pizza." (replaced the earlier "No es solo pizza." at the client's request).
+- Logo mark: a real asset (`public/assets/images/logo-mark.png`), Michelangelo's David composited in front of a wood-fired pizza like a halo. Used alongside the ROTTHEM wordmark in the navbar and footer; not a placeholder, don't swap for a generic icon.
 - Voice: direct, warm, colloquial Paraguayan Spanish ("vos" register), matching how a neighborhood pizzeria actually talks to its customers.
 
 ## Evidence on Hand

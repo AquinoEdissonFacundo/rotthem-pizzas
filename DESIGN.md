@@ -172,6 +172,7 @@ La franja "checker" (conic-gradient de cuadros azul/blanco) es la forma decorati
 - **Fotografía repetida:** con solo 3 fotos reales de pizza disponibles para 5 ítems del menú, dos tarjetas reutilizan la foto de otra. Es una decisión consciente (evitar stock genérico) mientras no haya más fotos reales; actualizar cuando estén disponibles.
 
 ### Navigation
+- **Logo:** el ícono de marca (David de Miguel Ángel con una pizza a la leña de fondo, a modo de halo) junto al wordmark "ROTTH**E**M", en navbar y footer. Es un activo real, no un ícono genérico de reemplazo.
 - **Desktop:** barra fija, transparente sobre el hero, gana fondo blanco translúcido + blur + sombra suave al hacer scroll (`#nav.scrolled`); los links cambian de blanco a negro-horno en el mismo punto. Subrayado azul animado en hover (`nav-link::after`).
 - **Mobile:** botón hamburguesa circular de borde blanco/negro (según scroll) que se transforma en X; el menú se revela a pantalla completa con `clip-path: circle()` creciendo desde el botón, fondo Negro Horno, links en Bevan mayúscula.
 
