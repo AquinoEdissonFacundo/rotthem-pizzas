@@ -42,7 +42,7 @@ Two differentiators, held with equal weight, neither subordinate to the other:
 
 - Name: Rotthem (stylized ROTTHEM in display type).
 - Founder and pizzero Rafa is named explicitly as the face of the brand ("Rafa · Fundador & pizzero"); he is a real person, not a placeholder persona.
-- Current tagline, shipped and treated as binding voice: "El arte de hacer pizza." (replaced the earlier "No es solo pizza." at the client's request).
+- Hero identity block (current, replaced the earlier "El arte de hacer pizza." / "No es solo pizza." headlines): "ROTTHEM" as the display title, "Pizza Napolitana" as descriptor, "Fatte a Mano" as an italicized Italian motto ("made by hand"). Leans into the brand's Neapolitan/Italian heritage directly through language rather than through visual clichés. Hero CTAs are "Ver la carta" and "Conocé Rotthem" (→ Nosotros), not a reservation-first framing.
 - Logo mark: a real asset (`public/assets/images/logo-mark.png`), Michelangelo's David composited in front of a wood-fired pizza like a halo. Used alongside the ROTTHEM wordmark in the navbar and footer; not a placeholder, don't swap for a generic icon.
 - Voice: direct, warm, colloquial Paraguayan Spanish ("vos" register), matching how a neighborhood pizzeria actually talks to its customers.
 
@@ -58,5 +58,5 @@ Two differentiators, held with equal weight, neither subordinate to the other:
 1. Every path on the page funnels to a WhatsApp conversation — WhatsApp is the transaction layer, not an optional contact channel.
 2. The two differentiators (wood-fired craft, live-served Pizza Corrida) get equal narrative weight; the page never lets one eclipse the other.
 3. Real evidence only. Real photos, real contact details, real founder story. No fabricated reviews, prices, or stats.
-4. One page serves four distinct intents (walk-in diners, groups, event organizers, repeat delivery customers) without forcing them to compete for the same slot: the hero carries the walk-in/reservation framing while Eventos and Delivery carry the other two.
+4. One page serves four distinct intents (walk-in diners, groups, event organizers, repeat delivery customers) without forcing them to compete for the same slot: the hero now opens with brand/identity framing ("Conocé Rotthem" → Nosotros, "Ver la carta" → menu) rather than reservation-first, while dedicated Reservas, Eventos, and Delivery sections carry their own specific intents further down the page.
 5. Voice stays Paraguayan and conversational ("vos"), never generic marketing English-translated Spanish.
