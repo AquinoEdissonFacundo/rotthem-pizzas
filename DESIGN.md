@@ -4,7 +4,6 @@ description: Napolitana a la leña hecha en Fernando de la Mora, Paraguay.
 colors:
   rotthem-blue: "#2F5FC4"
   lena-amber: "#F2A93B"
-  whatsapp-green: "#25D366"
   negro-horno: "#0A0E1A"
   negro-carbon: "#070A12"
   white: "#FFFFFF"
@@ -94,7 +93,7 @@ Cálido sin caer en el cliché rústico-artesanal (nada de madera clara, tipogra
 
 ## Colors
 
-Paleta restringida y funcional: un azul de marca que hace todo el trabajo de llamado a la acción, un ámbar que aparece solo como acento puntual, y un verde de WhatsApp que existe por reconocimiento de marca ajena, no por elección propia.
+Paleta restringida y funcional: un azul de marca que hace todo el trabajo de llamado a la acción, sin excepción ni siquiera para los puntos de contacto de WhatsApp, y un ámbar que aparece solo como acento puntual.
 
 ### Primary
 - **Azul Rotthem** (#2F5FC4): el color de marca. Botones primarios, la franja a cuadros, el subrayado de nav-links activos, el "PIZZA." en el hero, foco de campos de formulario claros, selección de texto (`::selection`).
@@ -102,16 +101,13 @@ Paleta restringida y funcional: un azul de marca que hace todo el trabajo de lla
 ### Secondary
 - **Ámbar Leña** (#F2A93B): acento cálido, deliberadamente raro. Aparece solo en el estado de foco de campos oscuros (formulario de Eventos), como contrapunto puntual al azul dominante. No es un color de fondo ni de botón.
 
-### Tertiary
-- **Verde WhatsApp** (#25D366): color funcional, no de marca. Reservado exclusivamente a los puntos de contacto de WhatsApp (ícono mobile, botón flotante). Es un requisito de reconocimiento externo, no una elección de paleta; no debe usarse fuera de esos dos contextos ni reinterpretarse como acento decorativo.
-
 ### Neutral
 - **Negro Horno** (#0A0E1A): fondo de secciones oscuras (hero, Eventos, Ubicación, CTA final) y color de texto principal sobre fondo blanco (`text-ink`). Todas las variantes de opacidad (ink/50 a ink/60) para texto secundario sobre blanco.
 - **Negro Carbón** (#070A12): un paso más oscuro que Negro Horno, reservado al footer. Marca el footer como el punto más denso de la página, no un fondo oscuro intercambiable con el resto.
 - **Blanco** (#FFFFFF): fondo de secciones claras (Carta, Reservas, Nosotros) y texto sobre fondo oscuro. Variantes de opacidad (white/30 a white/90) para jerarquía de texto sobre negro.
 
 ### Named Rules
-**La Regla del Azul Único.** El azul de marca es el único color que actúa como llamado a la acción. Nunca se introduce un segundo color "de acción" compitiendo por atención; el ámbar es acento de estado, no CTA, y el verde de WhatsApp vive solo en sus propios puntos de contacto.
+**La Regla del Azul Único.** El azul de marca es el único color que actúa como llamado a la acción, sin excepciones: incluidos los puntos de contacto de WhatsApp (ícono mobile, botón flotante), que antes usaban el verde de marca de WhatsApp y ahora van en Azul Rotthem. Nunca se introduce un segundo color "de acción" compitiendo por atención; el ámbar es acento de estado, no CTA.
 
 ## Typography
 
@@ -183,7 +179,7 @@ La franja "checker" (conic-gradient de cuadros azul/blanco) es la forma decorati
 Franja de 16px de alto con `conic-gradient` a cuadros azul/blanco (o blanco/azul invertido sobre fondo oscuro). Aparece solo como divisor entre secciones mayores, nunca como fondo decorativo de un bloque de contenido.
 
 ### WhatsApp Float (signature)
-Botón circular verde WhatsApp (60px), fijo en la esquina inferior derecha, oculto hasta pasar los 400px de scroll y luego animado con fade + scale. Es el único elemento persistente en pantalla fuera del navbar.
+Botón circular en Azul Rotthem (60px, antes verde WhatsApp), fijo en la esquina inferior derecha, oculto hasta pasar los 400px de scroll y luego animado con fade + scale. Es el único elemento persistente en pantalla fuera del navbar.
 
 ### Badge Spin (signature)
 Sello circular con texto curvo ("TRADICIONAL · NAPOLITANA · PARAGUAY") en rotación continua de 18s, con un punto azul sólido en el centro. Aparece una sola vez, en la sección Nosotros, como firma editorial puntual, no como recurso repetible.
@@ -201,7 +197,7 @@ Sello circular con texto curvo ("TRADICIONAL · NAPOLITANA · PARAGUAY") en rota
 ### Don't:
 - **Don't** agregar un eyebrow/kicker uppercase repitiendo el nombre de la sección arriba de un H2, bajo ninguna circunstancia.
 - **Don't** introducir un segundo color de acción compitiendo con el Azul Rotthem.
-- **Don't** usar el verde de WhatsApp fuera de los puntos de contacto de WhatsApp.
+- **Don't** usar verde u otro color de acción fuera del Azul Rotthem; los puntos de contacto de WhatsApp también van en azul.
 - **Don't** aplicar `rounded-full` a elementos rectangulares ni radios intermedios (8px, 12px, etc.): el sistema es binario entre 2px y círculo completo.
 - **Don't** caer en grillas de tarjetas idénticas con ícono+título+texto ni en sombra suave por defecto tipo SaaS.
 - **Don't** derivar hacia la estética rústico-artesanal genérica (madera clara, script, paleta crema) que el proyecto descartó explícitamente.

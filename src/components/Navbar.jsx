@@ -61,7 +61,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener"
               aria-label="Pedí por WhatsApp"
-              className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-brand flex items-center justify-center"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path

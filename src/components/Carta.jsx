@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { waLink } from "../constants";
 import { PIZZAS, formatGs } from "../data/pizzas";
 
-const CARTA_TEXT = "Hola! Quiero hacer un pedido en Rotthem 🍕";
 const PREVIEW = PIZZAS.slice(0, 3);
 
 export default function Carta() {
@@ -51,21 +49,13 @@ export default function Carta() {
           ))}
         </div>
 
-        <div className="reveal mt-14 flex flex-wrap items-center justify-center gap-4">
+        <div className="reveal mt-14 text-center">
           <Link
             to="/menu"
             className="btn-outline-b inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase font-bold px-8 py-4"
           >
             Ver más de la carta
           </Link>
-          <a
-            href={waLink(CARTA_TEXT)}
-            target="_blank"
-            rel="noopener"
-            className="btn-dark inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase font-bold px-8 py-4"
-          >
-            Pedí por WhatsApp
-          </a>
         </div>
       </div>
     </section>
