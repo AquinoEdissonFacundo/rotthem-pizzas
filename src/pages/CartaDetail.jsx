@@ -4,19 +4,19 @@ import PageTransition from "../components/PageTransition";
 import { getPizzaBySlug, formatGs } from "../data/pizzas";
 import { waLink } from "../constants";
 
-export default function MenuDetail() {
+export default function CartaDetail() {
   const { slug } = useParams();
   const pizza = getPizzaBySlug(slug);
   useScrollReveal([slug]);
 
-  if (!pizza) return <Navigate to="/menu" replace />;
+  if (!pizza) return <Navigate to="/carta" replace />;
 
   return (
     <PageTransition>
       <section className="page-top relative pb-24 md:pb-32 px-6 md:px-10 bg-ink">
         <div className="max-w-5xl mx-auto">
           <Link
-            to="/menu"
+            to="/carta"
             className="back-link reveal text-xs tracking-[0.2em] uppercase font-bold text-white/55 hover:text-brand transition-colors mb-10"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -37,7 +37,7 @@ export default function MenuDetail() {
             </div>
 
             <div className="reveal">
-              <h1 className="font-display text-white text-5xl md:text-6xl tracking-tight leading-[0.95] mb-4">
+              <h1 className="pizza-title font-display text-white tracking-tight leading-[0.95] mb-4">
                 {pizza.name.toUpperCase()}
               </h1>
               <div className="font-display text-brand text-2xl md:text-3xl mb-6">{formatGs(pizza.price)}</div>

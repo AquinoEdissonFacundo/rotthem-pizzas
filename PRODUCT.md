@@ -17,7 +17,7 @@ Four confirmed audiences, all converting through the same WhatsApp funnel:
 
 ## Product Purpose
 
-A storefront for Rotthem Pizzas, a real wood-fired Neapolitan pizzeria in Fernando de la Mora, Paraguay. The site's only job is converting visits into a WhatsApp conversation: a table reservation, a delivery order, or an event quote. Success is measured in WhatsApp clicks, not on-site checkout. The main landing page (`/`) carries the full sales narrative; the menu (`/menu` and `/menu/:slug`) is a dedicated set of pages so each item can be linked and browsed on its own.
+A storefront for Rotthem Pizzas, a real wood-fired Neapolitan pizzeria in Fernando de la Mora, Paraguay. The site's only job is converting visits into a WhatsApp conversation: a table reservation, a delivery order, or an event quote. Success is measured in WhatsApp clicks, not on-site checkout. The main landing page (`/`) carries the full sales narrative; the menu (`/carta` and `/carta/:slug`) is a dedicated set of pages so each item can be linked and browsed on its own.
 
 ## Positioning
 
@@ -35,8 +35,8 @@ Two differentiators, held with equal weight, neither subordinate to the other:
 
 ## Capabilities and Constraints
 
-- Static marketing site, no backend, client-side routed (React Router: `/`, `/menu`, `/menu/:slug`). The reservation and event forms only validate that a name was entered, then compose a WhatsApp deep link; nothing is persisted server-side.
-- Menu pricing is decided and published: the home page previews 3 items, `/menu` lists all of them, and each has its own detail page. Prices are rounded to whole-menu numbers for display, not the exact figures from the internal costing sheet. Ordering itself still has no cart; clicking a menu item opens WhatsApp with that item pre-filled.
+- Static marketing site, no backend, client-side routed (React Router: `/`, `/carta`, `/carta/:slug`). The reservation and event forms only validate that a name was entered, then compose a WhatsApp deep link; nothing is persisted server-side.
+- Menu pricing is decided and published: the home page previews 3 items, `/carta` lists all of them, and each has its own detail page. Prices are rounded to whole-menu numbers for display, not the exact figures from the internal costing sheet. Ordering itself still has no cart; clicking a menu item opens WhatsApp with that item pre-filled.
 
 ## Brand Commitments
 

@@ -4,7 +4,7 @@ import { useScrollY } from "../hooks/useScrollY";
 import { waLink } from "../constants";
 
 const links = [
-  { to: "/menu", label: "Carta" },
+  { to: "/carta", label: "Carta" },
   { to: "/#eventos", label: "Eventos" },
   { to: "/#reservas", label: "Reservas" },
   { to: "/#delivery", label: "Delivery" },
@@ -18,7 +18,7 @@ export default function Navbar() {
   const scrollY = useScrollY();
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const isMenuActive = location.pathname.startsWith("/menu");
+  const isCartaActive = location.pathname.startsWith("/carta");
   const scrolled = isHome ? scrollY > 40 : true;
   const [open, setOpen] = useState(false);
 
@@ -45,7 +45,7 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-8 text-sm font-semibold">
             {links.map((l) => (
-              <Link key={l.to} to={l.to} className={navItemClass(l.to === "/menu" && isMenuActive)}>
+              <Link key={l.to} to={l.to} className={navItemClass(l.to === "/carta" && isCartaActive)}>
                 {l.label}
               </Link>
             ))}
@@ -115,7 +115,7 @@ export default function Navbar() {
             to={l.to}
             onClick={() => setOpen(false)}
             className={`mnav-link font-display text-3xl ${
-              l.to === "/menu" && isMenuActive ? "text-brand" : "text-white"
+              l.to === "/carta" && isCartaActive ? "text-brand" : "text-white"
             }`}
           >
             {l.label}

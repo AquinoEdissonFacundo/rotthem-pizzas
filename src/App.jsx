@@ -2,8 +2,8 @@ import { useEffect, useLayoutEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import Menu from "./pages/Menu";
-import MenuDetail from "./pages/MenuDetail";
+import Carta from "./pages/Carta";
+import CartaDetail from "./pages/CartaDetail";
 
 function useAnchorSmoothScroll() {
   useEffect(() => {
@@ -44,8 +44,8 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/menu/:slug" element={<MenuDetail />} />
+        <Route path="/carta" element={<Carta />} />
+        <Route path="/carta/:slug" element={<CartaDetail />} />
       </Route>
     </Routes>
   );

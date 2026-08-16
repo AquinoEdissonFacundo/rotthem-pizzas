@@ -185,6 +185,11 @@
   .top-5{ top:1.25rem; }
 
   /* ---------- Menu detail ---------- */
+  /* Fluid instead of a fixed text-5xl/6xl step: one-word names (Napolitana,
+     Vegetariana) in Bevan overflowed their column on narrow phones at a
+     fixed 48px. Scales down safely below the md breakpoint instead. */
+  .pizza-title{ font-size:clamp(2rem, 9vw, 3.75rem); }
+
   .ingredient-chip{
     font-size:.6875rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
     background:rgba(255,255,255,.06); border:2px solid rgba(255,255,255,.15); border-radius:2px;

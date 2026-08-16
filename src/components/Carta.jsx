@@ -24,7 +24,7 @@ export default function Carta() {
           {PREVIEW.map((pizza, i) => (
             <Link
               key={pizza.slug}
-              to={`/menu/${pizza.slug}`}
+              to={`/carta/${pizza.slug}`}
               className="menu-card reveal block rounded-sm overflow-hidden bg-ink"
               style={{ "--i": i }}
             >
@@ -51,7 +51,7 @@ export default function Carta() {
 
         <div className="reveal mt-14 text-center">
           <Link
-            to="/menu"
+            to="/carta"
             className="btn-outline-b inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase font-bold px-8 py-4"
           >
             Ver más de la carta

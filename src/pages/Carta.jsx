@@ -3,29 +3,43 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import PageTransition from "../components/PageTransition";
 import { PIZZAS, formatGs } from "../data/pizzas";
 
-export default function Menu() {
+export default function Carta() {
   useScrollReveal();
 
   return (
     <PageTransition>
-      <section className="page-top relative pb-24 md:pb-32 px-6 md:px-10 bg-ink">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-14 md:mb-16">
-            <h1 className="reveal font-display text-white text-5xl md:text-7xl tracking-tight leading-[0.95] mb-4">
-              LA CARTA
-              <br />
-              COMPLETA.
-            </h1>
-            <p className="reveal text-white/60 max-w-md">
-              Todas nuestras pizzas, hechas a la leña. Tocá una para ver ingredientes y pedirla por WhatsApp.
-            </p>
-          </div>
+      <div className="page-top bg-ink">
+        <div className="checker"></div>
+      </div>
 
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-ink overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/assets/images/background.png"
+            alt=""
+            className="w-full h-full object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/90 to-ink"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <h1 className="reveal font-display text-white text-5xl md:text-7xl tracking-tight leading-[0.95] mb-4">
+            LA CARTA
+            <br />
+            COMPLETA.
+          </h1>
+          <p className="reveal text-white/60 max-w-md mx-auto">
+            Todas nuestras pizzas, hechas a la leña. Tocá una para ver ingredientes y pedirla por WhatsApp.
+          </p>
+        </div>
+      </section>
+
+      <section className="relative pt-4 pb-24 md:pb-32 px-6 md:px-10 bg-ink">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 stagger">
             {PIZZAS.map((pizza, i) => (
               <Link
                 key={pizza.slug}
-                to={`/menu/${pizza.slug}`}
+                to={`/carta/${pizza.slug}`}
                 className="menu-card reveal block rounded-sm overflow-hidden bg-ink border-2 border-white/15"
                 style={{ "--i": i % 3 }}
               >

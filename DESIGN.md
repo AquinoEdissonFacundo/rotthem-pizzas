@@ -166,14 +166,18 @@ La franja "checker" (conic-gradient de cuadros azul/blanco) es la forma decorati
 ### Menu Card
 - **Corner Style:** `rounded-sm`, overflow oculto.
 - **Background:** foto a sangre con overlay degradado (transparente → Negro Horno al 85%) para legibilidad del texto inferior.
-- **Contenido:** nombre (Title, Bevan) y precio (mismo tratamiento, Azul Rotthem) en una línea arriba; descripción corta debajo. Cada tarjeta es un link directo a WhatsApp con esa pizza pre-cargada en el mensaje.
+- **Contenido:** un pill "Ver detalle →" fijo (no solo al hover) arriba a la izquierda, sobre fondo `bg-ink/75` para que se lea contra cualquier foto — deja explícito que la tarjeta lleva a otra página, no que es solo informativa. Nombre (Title, Bevan) y precio (mismo tratamiento, Azul Rotthem) en una línea abajo; descripción corta debajo.
 - **Hover:** la tarjeta se eleva y gira -0.6°, la imagen escala 1.08 y gira 0.8° dentro del recorte; textura "hecha a mano" vía movimiento, no vía sombra.
-- **Disclosure:** la grilla muestra 3 tarjetas por defecto (`grid-cols-3` en desktop); un botón `btn-outline-b` ("Ver más de la carta") revela el resto sin recargar la página. Las tarjetas agregadas después del montaje no dependen del observer de scroll-reveal (que solo ve el DOM inicial): usan una animación de entrada propia (`.menu-card-enter`) para no quedar invisibles.
+- **Navegación:** cada tarjeta es un `Link` a `/carta/:slug` (el detalle de esa pizza, con ingredientes y el botón real de WhatsApp), no un link directo a WhatsApp. La home (`Carta.jsx`, sección "Hecha a la leña") muestra 3 tarjetas con un botón "Ver más de la carta" que lleva a `/carta`, la página completa con las 5.
 - **Fotografía repetida:** con solo 3 fotos reales de pizza disponibles para 5 ítems del menú, dos tarjetas reutilizan la foto de otra. Es una decisión consciente (evitar stock genérico) mientras no haya más fotos reales; actualizar cuando estén disponibles.
+
+### Carta Page Intro (signature)
+La página `/carta` no arranca en seco con el título sobre fondo plano: primero una franja checker (apenas termina el espacio del nav fijo), después una banda con una de las fotos reales de fondo al 25% de opacidad + el mismo degradado que usa Eventos, título centrado en Display. Existe para que la página se sienta como un destino propio, no como una sección más — el mismo motivo por el que el nav ilumina "Carta" en azul con subrayado fijo mientras estás en `/carta` o en el detalle de una pizza (ver Navigation).
 
 ### Navigation
 - **Logo:** el ícono de marca (David de Miguel Ángel con una pizza a la leña de fondo, a modo de halo) junto al wordmark "ROTTH**E**M", en navbar y footer. Es un activo real, no un ícono genérico de reemplazo.
 - **Desktop:** barra fija, transparente sobre el hero, gana fondo blanco translúcido + blur + sombra suave al hacer scroll (`#nav.scrolled`); los links cambian de blanco a negro-horno en el mismo punto. Subrayado azul animado en hover (`nav-link::after`).
+- **Estado activo:** "Carta" es el único link del nav que navega a una página real (`/carta`) en vez de hacer scroll dentro de la home; por eso es el único que lleva estado activo — Azul Rotthem fijo + el mismo subrayado del hover, pero permanente (`.nav-link.active::after`) — mientras estás en `/carta` o en el detalle de una pizza. Los demás links (Eventos, Reservas, Delivery, Nosotros, Ubicación) nunca llevan estado activo porque son anclas, no rutas.
 - **Mobile:** botón hamburguesa circular de borde blanco/negro (según scroll) que se transforma en X; el menú se revela a pantalla completa con `clip-path: circle()` creciendo desde el botón, fondo Negro Horno, links en Bevan mayúscula.
 
 ### Checker Strip (signature)
