@@ -13,12 +13,7 @@ export default function Layout() {
       <Loader />
       <div className="checker"></div>
       <Navbar />
-      <AnimatePresence
-        mode="wait"
-        onExitComplete={() => {
-          if (!location.hash) window.scrollTo(0, 0);
-        }}
-      >
+      <AnimatePresence mode="wait">
         <Outlet key={location.pathname} />
       </AnimatePresence>
       <Footer />

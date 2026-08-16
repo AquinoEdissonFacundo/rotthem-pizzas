@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useEffect, useLayoutEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
@@ -24,8 +24,21 @@ function useAnchorSmoothScroll() {
   }, []);
 }
 
+function useScrollToTopOnNavigate() {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    // A hash means Home's own #anchor effect owns the landing spot.
+    // Reset before the outgoing page's exit animation plays (not after,
+    // via onExitComplete) so the browser never gets a chance to clamp
+    // scrollY when a much shorter page mounts under a tall scroll offset --
+    // that clamp is what landed users mid-page instead of at the top.
+    if (!location.hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location.pathname]);
+}
+
 export default function App() {
   useAnchorSmoothScroll();
+  useScrollToTopOnNavigate();
 
   return (
     <Routes>
