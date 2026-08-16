@@ -36,7 +36,7 @@ export default function Navbar() {
               scrolled ? "text-ink" : "text-white"
             }`}
           >
-            ROTTHEM
+            ROTTH<span className="text-brand">E</span>M
           </Link>
 
           <div className="hidden lg:flex items-center gap-8 text-sm font-semibold">
