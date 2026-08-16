@@ -18,12 +18,14 @@ export default function Navbar() {
   const scrollY = useScrollY();
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isMenuActive = location.pathname.startsWith("/menu");
   const scrolled = isHome ? scrollY > 40 : true;
   const [open, setOpen] = useState(false);
 
-  const navItemClass = `nav-link nav-item transition-colors hover:text-brand ${
-    scrolled ? "text-ink" : "text-white"
-  }`;
+  const navItemClass = (isActive) =>
+    `nav-link nav-item transition-colors hover:text-brand ${
+      isActive ? "active text-brand" : scrolled ? "text-ink" : "text-white"
+    }`;
   const burgerLineStyle = { background: scrolled ? "#0A0E1A" : "#fff" };
 
   return (
@@ -43,7 +45,7 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-8 text-sm font-semibold">
             {links.map((l) => (
-              <Link key={l.to} to={l.to} className={navItemClass}>
+              <Link key={l.to} to={l.to} className={navItemClass(l.to === "/menu" && isMenuActive)}>
                 {l.label}
               </Link>
             ))}
@@ -112,7 +114,9 @@ export default function Navbar() {
             key={l.to}
             to={l.to}
             onClick={() => setOpen(false)}
-            className="mnav-link font-display text-3xl text-white"
+            className={`mnav-link font-display text-3xl ${
+              l.to === "/menu" && isMenuActive ? "text-brand" : "text-white"
+            }`}
           >
             {l.label}
           </Link>
