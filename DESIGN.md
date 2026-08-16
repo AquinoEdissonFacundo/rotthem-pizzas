@@ -12,29 +12,29 @@ colors:
   field-error: "#E24444"
 typography:
   display:
-    fontFamily: "Anton, sans-serif"
+    fontFamily: "Bevan, serif"
     fontSize: "clamp(2.5rem, 16vw, 6rem)"
     fontWeight: 400
     lineHeight: 0.92
-    letterSpacing: "0.01em"
+    letterSpacing: "-0.01em"
   headline:
-    fontFamily: "Anton, sans-serif"
+    fontFamily: "Bevan, serif"
     fontSize: "clamp(2rem, 7vw, 4.5rem)"
     fontWeight: 400
     lineHeight: 0.95
-    letterSpacing: "0.01em"
+    letterSpacing: "-0.01em"
   title:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "Instrument Sans, sans-serif"
     fontSize: "1.5rem"
     fontWeight: 700
     lineHeight: 1.2
   body:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "Instrument Sans, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 400
     lineHeight: 1.625
   label:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "Instrument Sans, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 700
     letterSpacing: "0.2em"
@@ -81,12 +81,12 @@ components:
 
 **Creative North Star: "El Cartel de la Esquina"**
 
-Rotthem se lee como el cartel pintado a mano de una pizzería de barrio, no como una app. Tipografía Anton en mayúsculas condensadas grita el nombre y las promesas ("NO ES SOLO PIZZA", "RESERVÁ TU MESA") con la contundencia de un cartel serigrafiado, no de un titular editorial. La franja a cuadros azul y blanco funciona como el borde de un toldo: divide secciones con la misma energía gráfica que separaría un mostrador del resto del local. Todo es plano y de bloques de color sólido; la única "textura" permitida es la fotografía real (el fuego, la masa, a Rafa) y el giro sutil de -2°/2° en insignias y hovers, el gesto que recuerda que esto lo hace una persona, no una máquina.
+Rotthem se lee como el cartel pintado a mano de una pizzería de barrio, no como una app. Tipografía Bevan en mayúsculas —una slab serif con raíz en la rotulación pintada a mano, gruesa y con carácter propio, no un "impact font" genérico— grita el nombre y las promesas ("NO ES SOLO PIZZA", "RESERVÁ TU MESA") con la contundencia de un cartel serigrafiado, no de un titular editorial ni de una landing hecha con IA. La franja a cuadros azul y blanco funciona como el borde de un toldo: divide secciones con la misma energía gráfica que separaría un mostrador del resto del local. Todo es plano y de bloques de color sólido; la única "textura" permitida es la fotografía real (el fuego, la masa, a Rafa) y el giro sutil de -2°/2° en insignias y hovers, el gesto que recuerda que esto lo hace una persona, no una máquina.
 
 Cálido sin caer en el cliché rústico-artesanal (nada de madera clara, tipografía script ni paleta crema de panadería boutique): el calor viene del contenido real (fotos, la voz en "vos", el nombre de Rafa) y del ámbar puntual, no de un fondo pastel. Alto contraste y energía de cartel callejero por encima de cualquier curaduría genérica tipo SaaS: nada de grillas de tarjetas idénticas con ícono+título+texto, nada de sombra suave por defecto.
 
 **Key Characteristics:**
-- Tipografía display en mayúsculas, condensada, sin sutileza.
+- Tipografía display en mayúsculas, slab serif gruesa con raíz en rotulación pintada a mano, sin sutileza.
 - Bloques de color plano (azul, negro-horno, blanco) en vez de gradientes o vidrio.
 - Franja a cuadros azul/blanco como único motivo decorativo recurrente, siempre como divisor.
 - Rotación de -2°/2° como firma de "hecho a mano", nunca decorativa fuera de insignias/hover.
@@ -115,17 +115,17 @@ Paleta restringida y funcional: un azul de marca que hace todo el trabajo de lla
 
 ## Typography
 
-**Display Font:** Anton (con sans-serif de respaldo)
-**Body Font:** Inter (con sans-serif de respaldo), pesos 400 a 800
+**Display Font:** Bevan (con serif de respaldo) — slab serif con raíz en rotulación pintada a mano, deliberadamente elegida para no sonar a "landing hecha con IA" (el par Anton/Inter que tenía el sitio antes es exactamente el tipo de elección genérica que un cliente reconoce y rechaza).
+**Body Font:** Instrument Sans (con sans-serif de respaldo), pesos 400 a 700
 
-**Character:** Anton aporta la voz gráfica y gritada del cartel; Inter en pesos medios a extra-bold sostiene todo lo funcional (botones, formularios, cuerpo de texto) sin competir nunca en protagonismo con el display.
+**Character:** Bevan aporta la voz de cartel pintado a mano, con peso y textura propios en vez de la contundencia fría de un "impact font"; Instrument Sans en pesos medios a bold sostiene todo lo funcional (botones, formularios, cuerpo de texto) sin competir nunca en protagonismo con el display.
 
 ### Hierarchy
 - **Display** (400, clamp(2.5rem, 16vw, 6rem), line-height 0.92): el H1 del hero. Único uso a esta escala.
-- **Headline** (400, clamp(2rem, 7vw, 4.5rem), line-height 0.95): títulos de sección (H2), siempre en mayúsculas, siempre Anton.
+- **Headline** (400, clamp(2rem, 7vw, 4.5rem), line-height 0.95): títulos de sección (H2), siempre en mayúsculas, siempre Bevan.
 - **Title** (700, 1.5rem): subtítulos de tarjeta (nombres de pizza en Carta), cifras destacadas (horarios, "100%"), logo de navbar.
 - **Body** (400–500, 1.125rem, line-height 1.625): párrafos descriptivos, acotados a `max-w-md` / `max-w-sm` (≈ 40–65ch en la práctica, nunca ancho completo).
-- **Label** (700, 0.75rem, tracking 0.15em–0.3em, mayúsculas): texto de botón y el badge de ubicación del hero ("Fernando de la Mora · Paraguay"), que porta un dato real, no un rótulo de sección. Inter en bold, nunca Anton.
+- **Label** (700, 0.75rem, tracking 0.15em–0.3em, mayúsculas): texto de botón y el badge de ubicación del hero ("Fernando de la Mora · Paraguay"), que porta un dato real, no un rótulo de sección. Instrument Sans en bold, nunca Bevan.
 
 ### Named Rules
 **La Regla de las Mayúsculas Ganadas.** Las mayúsculas se reservan a Display, Headline y Label (botones y el badge de ubicación). El cuerpo de texto nunca va en mayúsculas: a esta escala se vuelve ilegible y rompe el contraste entre "lo que grita" y "lo que explica".
@@ -170,14 +170,14 @@ La franja "checker" (conic-gradient de cuadros azul/blanco) es la forma decorati
 ### Menu Card
 - **Corner Style:** `rounded-sm`, overflow oculto.
 - **Background:** foto a sangre con overlay degradado (transparente → Negro Horno al 85%) para legibilidad del texto inferior.
-- **Contenido:** nombre (Title, Anton) y precio (mismo tratamiento, Azul Rotthem) en una línea arriba; descripción corta debajo. Cada tarjeta es un link directo a WhatsApp con esa pizza pre-cargada en el mensaje.
+- **Contenido:** nombre (Title, Bevan) y precio (mismo tratamiento, Azul Rotthem) en una línea arriba; descripción corta debajo. Cada tarjeta es un link directo a WhatsApp con esa pizza pre-cargada en el mensaje.
 - **Hover:** la tarjeta se eleva y gira -0.6°, la imagen escala 1.08 y gira 0.8° dentro del recorte; textura "hecha a mano" vía movimiento, no vía sombra.
 - **Disclosure:** la grilla muestra 3 tarjetas por defecto (`grid-cols-3` en desktop); un botón `btn-outline-b` ("Ver más de la carta") revela el resto sin recargar la página. Las tarjetas agregadas después del montaje no dependen del observer de scroll-reveal (que solo ve el DOM inicial): usan una animación de entrada propia (`.menu-card-enter`) para no quedar invisibles.
 - **Fotografía repetida:** con solo 3 fotos reales de pizza disponibles para 5 ítems del menú, dos tarjetas reutilizan la foto de otra. Es una decisión consciente (evitar stock genérico) mientras no haya más fotos reales; actualizar cuando estén disponibles.
 
 ### Navigation
 - **Desktop:** barra fija, transparente sobre el hero, gana fondo blanco translúcido + blur + sombra suave al hacer scroll (`#nav.scrolled`); los links cambian de blanco a negro-horno en el mismo punto. Subrayado azul animado en hover (`nav-link::after`).
-- **Mobile:** botón hamburguesa circular de borde blanco/negro (según scroll) que se transforma en X; el menú se revela a pantalla completa con `clip-path: circle()` creciendo desde el botón, fondo Negro Horno, links en Anton mayúscula.
+- **Mobile:** botón hamburguesa circular de borde blanco/negro (según scroll) que se transforma en X; el menú se revela a pantalla completa con `clip-path: circle()` creciendo desde el botón, fondo Negro Horno, links en Bevan mayúscula.
 
 ### Checker Strip (signature)
 Franja de 16px de alto con `conic-gradient` a cuadros azul/blanco (o blanco/azul invertido sobre fondo oscuro). Aparece solo como divisor entre secciones mayores, nunca como fondo decorativo de un bloque de contenido.
@@ -191,7 +191,7 @@ Sello circular con texto curvo ("TRADICIONAL · NAPOLITANA · PARAGUAY") en rota
 ## Do's and Don'ts
 
 ### Do:
-- **Do** usar Anton solo en mayúsculas para Display, Headline y logo; nunca para cuerpo de texto.
+- **Do** usar Bevan solo en mayúsculas para Display, Headline y logo; nunca para cuerpo de texto.
 - **Do** mantener el azul de marca como único color de llamado a la acción; el ámbar es acento de foco, no CTA.
 - **Do** usar la franja checker únicamente como divisor entre secciones, nunca como fondo de contenido.
 - **Do** limitar la rotación decorativa a -2°/2° y solo en insignias, tarjetas en hover y botones en hover; es la única fuente de "imperfección hecha a mano" del sistema.

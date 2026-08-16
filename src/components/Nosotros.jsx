@@ -19,7 +19,7 @@ export default function Nosotros() {
                 fontSize="13.5"
                 letterSpacing="2"
                 fill="currentColor"
-                fontFamily="Inter, sans-serif"
+                fontFamily="Instrument Sans, sans-serif"
                 fontWeight="700"
               >
                 <textPath href="#circlePath">
