@@ -6,7 +6,7 @@ import { IconMessage, IconMail, IconPin, IconClock, IconCamera } from "../compon
 
 const motivos = ["Reserva", "Evento", "Delivery", "Otro"];
 
-const igShots = ["pizza-1.jpg", "rafa-salsa.jpg", "rafa-trabajando.jpg"];
+const igShots = ["pizza-1.webp", "rafa-salsa.webp", "rafa-trabajando.webp"];
 
 export default function Contacto() {
   useScrollReveal();
@@ -116,7 +116,7 @@ export default function Contacto() {
             </div>
 
             <div className="card-flat p-0 overflow-hidden">
-              <img src="/assets/images/rrss-pilar.jpg" alt="Última publicación de Rotthem" className="w-full h-56 object-cover" />
+              <img src="/assets/images/rrss-pilar.webp" alt="Última publicación de Rotthem" className="w-full h-56 object-cover" />
               <div className="p-6">
                 <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "var(--terracota)" }}>Última publicación</span>
                 <p className="text-sm mt-2" style={{ color: "var(--gris)" }}>

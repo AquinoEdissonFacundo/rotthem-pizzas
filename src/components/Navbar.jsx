@@ -24,7 +24,7 @@ export default function Navbar() {
       <nav id="nav2" className="sticky top-0 z-50 bg-[var(--marmol)]" style={{ background: "var(--marmol)" }}>
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-            <img src="/assets/images/Logo Rotthem.png" alt="Rotthem" className="h-7 md:h-8 w-auto" />
+            <img src="/assets/images/Logo Rotthem.webp" alt="Rotthem" className="h-7 md:h-8 w-auto" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-7 text-sm">

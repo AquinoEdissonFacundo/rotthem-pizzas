@@ -6,15 +6,15 @@ import { INSTAGRAM_URL, INSTAGRAM_HANDLE } from "../constants";
 const filters = ["Todo", "Eventos", "Ferias", "El Local"];
 
 const photos = [
-  { img: "pizza-entrando-horno.jpg", caption: "Margarita al horno", cat: "El Local" },
-  { img: "chica-gorra-pizza-v2.jpg", caption: "El vuelo de la masa", cat: "Ferias" },
-  { img: "entregando-pizza.jpg", caption: "Evento privado", cat: "Eventos" },
-  { img: "rafa-salsa.jpg", caption: "Rafa en producción", cat: "El Local" },
-  { img: "rafa-queso.jpg", caption: "", cat: "El Local" },
-  { img: "pizza-horno.jpg", caption: "450 °C, 90 segundos", cat: "El Local" },
-  { img: "entregando-pizza-2.jpg", caption: "", cat: "Eventos" },
-  { img: "menu-1.jpg", caption: "La carta impresa", cat: "El Local" },
-  { img: "pizza-mesa-madera.jpg", caption: "", cat: "Ferias" },
+  { img: "pizza-entrando-horno.webp", caption: "Margarita al horno", cat: "El Local" },
+  { img: "chica-gorra-pizza-v2.webp", caption: "El vuelo de la masa", cat: "Ferias" },
+  { img: "entregando-pizza.webp", caption: "Evento privado", cat: "Eventos" },
+  { img: "rafa-salsa.webp", caption: "Rafa en producción", cat: "El Local" },
+  { img: "rafa-queso.webp", caption: "", cat: "El Local" },
+  { img: "pizza-horno.webp", caption: "450 °C, 90 segundos", cat: "El Local" },
+  { img: "entregando-pizza-2.webp", caption: "", cat: "Eventos" },
+  { img: "menu-1.webp", caption: "La carta impresa", cat: "El Local" },
+  { img: "pizza-mesa-madera.webp", caption: "", cat: "Ferias" },
 ];
 
 export default function Galeria() {

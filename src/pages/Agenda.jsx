@@ -69,7 +69,7 @@ export default function Agenda() {
             </div>
           </div>
         </div>
-        <img src="/assets/images/rrss-pilar.jpg" alt="Rotthem en Pilar" className="w-full h-72 md:h-[460px] object-cover" />
+        <img src="/assets/images/rrss-pilar.webp" alt="Rotthem en Pilar" className="w-full h-72 md:h-[460px] object-cover" />
       </section>
 
       {/* CTA */}

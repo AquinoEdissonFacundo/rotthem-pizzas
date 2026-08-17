@@ -14,7 +14,7 @@ export default function Local() {
     <PageTransition>
       {/* Hero */}
       <section className="grid md:grid-cols-2">
-        <img src="/assets/images/pizza-entrando-horno.jpg" alt="Pizza entrando al horno" className="w-full h-72 md:h-auto object-cover" />
+        <img src="/assets/images/pizza-entrando-horno.webp" alt="Pizza entrando al horno" className="w-full h-72 md:h-auto object-cover" />
         <div className="flex flex-col justify-center px-6 md:px-16 py-14">
           <span className="pill-badge w-fit mb-4">Próximamente</span>
           <span className="eyebrow">El local</span>

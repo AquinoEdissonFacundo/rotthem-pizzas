@@ -61,7 +61,7 @@ export default function Historia() {
             En casa, mi abuela paterna y mi mamá siempre tuvieron la cocina como lenguaje de amor: uno demuestra cariño cocinando para otros. Quizás esa herencia viene todo esto. Yo todavía no lo sabía, pero ahí ya estaba empezando mi camino.
           </p>
         </div>
-        <img src="/assets/images/rafa-trabajando.jpg" alt="Rafa trabajando" className="w-full h-72 md:h-full object-cover order-1 md:order-2" />
+        <img src="/assets/images/rafa-trabajando.webp" alt="Rafa trabajando" className="w-full h-72 md:h-full object-cover order-1 md:order-2" />
       </section>
 
       {/* El camino */}
@@ -89,7 +89,7 @@ export default function Historia() {
 
       {/* Mi obsesión */}
       <section className="grid md:grid-cols-2">
-        <img src="/assets/images/rafa-estirando-bn.jpg" alt="Rafa estirando la masa" className="w-full h-72 md:h-full object-cover" />
+        <img src="/assets/images/rafa-estirando-bn.webp" alt="Rafa estirando la masa" className="w-full h-72 md:h-full object-cover" />
         <div className="flex flex-col justify-center px-6 md:px-16 py-14 gap-4">
           <h2 className="text-2xl md:text-3xl mb-2 max-w-sm">Mi obsesión: encontrar la receta perfecta.</h2>
           <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--gris)" }}>

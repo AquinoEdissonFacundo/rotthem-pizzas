@@ -27,7 +27,7 @@ export default function Delivery() {
             <a href={PEDIDOSYA_URL} target="_blank" rel="noopener" className="btn2 btn2-accent">Pedir por PedidosYa</a>
           </div>
         </div>
-        <img src="/assets/images/pizza-mesa-madera.jpg" alt="Pizza pepperoni Rotthem" className="w-full h-72 md:h-[520px] object-cover order-1 md:order-2" />
+        <img src="/assets/images/pizza-mesa-madera.webp" alt="Pizza pepperoni Rotthem" className="w-full h-72 md:h-[520px] object-cover order-1 md:order-2" />
       </section>
 
       {/* Canales */}

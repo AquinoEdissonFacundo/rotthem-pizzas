@@ -60,7 +60,7 @@ export default function Eventos() {
             Pedir presupuesto
           </a>
         </div>
-        <img src="/assets/images/entregando-pizza-2.jpg" alt="Pizza margarita Rotthem" className="w-full h-72 md:h-[520px] object-cover" />
+        <img src="/assets/images/entregando-pizza-2.webp" alt="Pizza margarita Rotthem" className="w-full h-72 md:h-[520px] object-cover" />
       </section>
 
       {/* Formatos */}

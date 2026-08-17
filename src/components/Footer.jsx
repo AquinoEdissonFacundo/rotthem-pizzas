@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-12 md:gap-8 mb-14">
           <div>
-            <img src="/assets/images/Logo Rotthem - Blanco.png" alt="Rotthem" className="h-9 mb-4" />
+            <img src="/assets/images/Logo Rotthem - Blanco.webp" alt="Rotthem" className="h-9 mb-4" />
             <p className="text-white/60 text-sm leading-relaxed max-w-xs quote-serif">
               Del río de Pilar al fuego de Asunción.
               <br />

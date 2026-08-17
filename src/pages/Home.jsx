@@ -7,28 +7,28 @@ import { IconPin, IconClock, IconChair } from "../components/Icons";
 
 const cards = [
   {
-    img: "pizza-mesa-2.jpg",
+    img: "pizza-mesa-2.webp",
     title: "El Local",
     desc: "El primer local está en camino. Falta poco y falta tu nombre en una mesa.",
     cta: "Reservar mesa",
     to: "/local",
   },
   {
-    img: "pizza-1.jpg",
+    img: "pizza-1.webp",
     title: "Eventos privados",
     desc: "De 20 a 90 invitados, el horno se adapta a la fiesta.",
     cta: "Pedir presupuesto",
     to: "/eventos",
   },
   {
-    img: "entregando-pizza.jpg",
+    img: "entregando-pizza.webp",
     title: "Delivery",
     desc: "El horno a tu puerta sin perder el humo. Delivery propio o PedidosYa.",
     cta: "Pedir ahora",
     to: "/delivery",
   },
   {
-    img: "chica-gorra-pizza-v2.jpg",
+    img: "chica-gorra-pizza-v2.webp",
     title: "Ferias & agenda",
     desc: "Palmear, el Cabildo, Pilar: cada mes armamos el puesto en otra parte.",
     cta: "Ver agenda",
@@ -36,7 +36,7 @@ const cards = [
   },
 ];
 
-const igShots = ["pizza-entrando-horno.jpg", "rafa-salsa.jpg", "rafa-trabajando.jpg", "rafa-queso.jpg"];
+const igShots = ["pizza-entrando-horno.webp", "rafa-salsa.webp", "rafa-trabajando.webp", "rafa-queso.webp"];
 
 export default function Home() {
   useScrollReveal();
@@ -47,7 +47,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden" style={{ minHeight: "min(640px, 90vh)" }}>
         <img
-          src="/assets/images/rafa-restaurante.jpg"
+          src="/assets/images/rafa-restaurante.webp"
           alt="Rafa, fundador de Rotthem, en la cocina"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* Historia teaser */}
       <section className="section-niebla grid md:grid-cols-2">
-        <img src="/assets/images/rafa-iga-bn.jpg" alt="Rafa Toloza" className="w-full h-64 md:h-full object-cover" />
+        <img src="/assets/images/rafa-iga-bn.webp" alt="Rafa Toloza" className="w-full h-64 md:h-full object-cover" />
         <div className="flex flex-col justify-center px-6 md:px-16 py-14 md:py-0">
           <span className="eyebrow">La historia</span>
           <h2 className="text-3xl md:text-4xl mb-4 max-w-md">Conocé al creador de tu próxima pizza favorita.</h2>
