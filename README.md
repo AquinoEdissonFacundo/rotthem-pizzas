@@ -1,13 +1,14 @@
-# Rotthem Pizzas
+# Rotthem — Pizzas & more
 
-Sitio web de Rotthem Pizzas, pizzería napolitana a la leña en Fernando de la Mora, Paraguay.
+Sitio web de Rotthem, pizzería napolitana fundada por Rafa Toloza. Local propio próximamente en Asunción, Paraguay; hoy opera por delivery, eventos privados y ferias.
 
-Landing page + carta completa, con reservas, pedidos de delivery y cotización de eventos (Pizza Corrida) integrados por WhatsApp.
+8 páginas (Inicio, Historia, El Local, Eventos, Delivery, Agenda, Galería, Contacto), con reservas, delivery y cotización de eventos integrados por WhatsApp / PedidosYa.
 
 ## Stack
 
 - [React](https://react.dev/) + [Vite](https://vite.dev/)
-- [React Router](https://reactrouter.com/) para el ruteo (`/`, `/menu`, `/menu/:slug`)
+- [Tailwind CSS](https://tailwindcss.com/) vía `@tailwindcss/vite`
+- [React Router](https://reactrouter.com/) para el ruteo (`/`, `/historia`, `/local`, `/eventos`, `/delivery`, `/agenda`, `/galeria`, `/contacto`)
 - [Framer Motion](https://motion.dev/) para transiciones de página y micro-interacciones
 
 ## Desarrollo

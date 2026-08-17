@@ -1,57 +1,78 @@
 export const PIZZAS = [
   {
-    slug: "muzzarela",
-    name: "Muzzarela",
+    slug: "muzzarella",
+    name: "Muzzarella",
+    price: 50000,
+    desc: "Salsa de tomate, albahaca, muzzarella y aceite de oliva extra virgen.",
+  },
+  {
+    slug: "margarita",
+    name: "Margarita",
+    price: 55000,
+    desc: "Salsa de tomate, albahaca, fiordilatte y aceite de oliva extra virgen.",
+  },
+  {
+    slug: "pepperoni",
+    name: "Pepperoni",
     price: 60000,
-    desc: "Mozzarella, salsa de tomate, aceite de oliva y albahaca fresca. La base de siempre.",
-    ingredients: ["Mozzarella", "Salsa de tomate", "Aceite de oliva", "Albahaca fresca"],
-    img: "/assets/images/img-3.jpg",
+    desc: "Salsa de tomate, albahaca, queso muzzarella y pepperoni.",
   },
   {
     slug: "napolitana",
     name: "Napolitana",
-    price: 70000,
-    desc: "Mozzarella, salsa de tomate, tomate fresco, ajo y perejil. Sabor directo, sin vueltas.",
-    ingredients: ["Mozzarella", "Salsa de tomate", "Tomate fresco", "Ajo", "Perejil"],
-    img: "/assets/images/img-4.jpg",
-  },
-  {
-    slug: "peperoni",
-    name: "Peperoni",
     price: 60000,
-    desc: "Mozzarella, salsa de tomate, peperoni y un toque picante, con albahaca.",
-    ingredients: ["Mozzarella", "Salsa de tomate", "Peperoni", "Picante", "Albahaca"],
-    img: "/assets/images/img-2.jpg",
+    desc: "Salsa de tomate, albahaca, queso muzzarella, ajo, tomate, perejil y aceite de oliva extra virgen.",
   },
   {
-    slug: "vegetariana",
-    name: "Vegetariana",
-    price: 55000,
-    desc: "Tomates cherry, rúcula, aceitunas negras, almendras laminadas y albahaca sobre salsa de tomate.",
-    ingredients: [
-      "Tomates cherry",
-      "Salsa de tomate",
-      "Rúcula",
-      "Aceitunas negras",
-      "Almendras laminadas",
-      "Albahaca",
-    ],
-    img: "/assets/images/img-3.jpg",
+    slug: "chopy",
+    name: "Chopy",
+    price: 60000,
+    desc: "Salsa de tomate, albahaca, queso muzzarella, choclo y queso catupiry.",
   },
   {
-    slug: "cuatro-quesos",
-    name: "Cuatro Quesos",
-    price: 50000,
-    desc: "Mozzarella y salsa cuatro quesos. Para los que no negocian con el queso.",
-    ingredients: ["Mozzarella", "Salsa cuatro quesos"],
-    img: "/assets/images/img-2.jpg",
+    slug: "mestiza",
+    name: "Mestiza",
+    price: 65000,
+    desc: "Salsa de tomate, albahaca, queso muzzarella y salsa de quesos.",
+  },
+  {
+    slug: "cinco-mejor",
+    name: "Cinco Mejor",
+    price: 70000,
+    desc: "Salsa de quesos de la casa (queso crema, ricotta, azul), muzzarella y parmesano.",
+  },
+  {
+    slug: "ktupollo",
+    name: "Ktupollo",
+    price: 75000,
+    desc: "Salsa de tomate, albahaca, queso muzzarella, pollo y queso catupiry.",
+  },
+  {
+    slug: "serrana",
+    name: "Serrana",
+    price: 80000,
+    desc: "Salsa de tomate, albahaca, queso muzzarella, rúcula y jamón serrano.",
+  },
+  {
+    slug: "de-la-tierra",
+    name: "De la Tierra",
+    price: 85000,
+    desc: "Salsa de tomate, albahaca, queso muzzarella, jamón cocido, champiñones y aceite de oliva extra virgen.",
+  },
+  {
+    slug: "top",
+    name: "Top",
+    price: 105000,
+    desc: "Salsa de quesos, albahaca, queso muzzarella, champiñones y pepperoni.",
   },
 ];
 
-export function getPizzaBySlug(slug) {
-  return PIZZAS.find((p) => p.slug === slug);
-}
+export const CALZONI = {
+  name: "Calzoni",
+  price: 35000,
+  desc: "El Clásico, Di Pepperoni o Cinco Quesos.",
+};
 
 export function formatGs(n) {
-  return `Gs. ${n.toLocaleString("es-PY")}`;
+  return `₲ ${n.toLocaleString("es-PY")}`;
 }

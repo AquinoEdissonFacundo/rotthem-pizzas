@@ -33,7 +33,7 @@ export default function Loader() {
       <div className="loader-mark">
         ROTTH<span>E</span>M
       </div>
-      <div className="loader-checker checker"></div>
+      <div className="loader-bar"></div>
     </div>
   );
 }

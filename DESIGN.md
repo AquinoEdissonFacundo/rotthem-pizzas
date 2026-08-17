@@ -1,208 +1,119 @@
 ---
-name: Rotthem Pizzas
-description: Napolitana a la leña hecha en Fernando de la Mora, Paraguay.
+name: Rotthem — Pizzas & more
+description: Pizza napoletana hecha a mano por Rafa Toloza. Asunción, Paraguay (local próximamente).
 colors:
-  rotthem-blue: "#2F5FC4"
-  lena-amber: "#F2A93B"
-  negro-horno: "#0A0E1A"
-  negro-carbon: "#070A12"
+  brand: "#2A42AB"
+  ink: "#131B4D"
+  lino: "#5B74DB"
+  niebla: "#E9EDFB"
+  marmol: "#F5F1E8"
+  piedra: "#E8E2D3"
+  terracota: "#C8472F"
+  gris: "#6E6A5E"
   white: "#FFFFFF"
-  field-border: "#E4E7EF"
-  field-error: "#E24444"
 typography:
   display:
-    fontFamily: "Bevan, serif"
-    fontSize: "clamp(2.5rem, 16vw, 6rem)"
-    fontWeight: 400
-    lineHeight: 0.92
+    fontFamily: "Bodoni Moda, serif"
+    fontWeight: 600
     letterSpacing: "-0.01em"
-  headline:
-    fontFamily: "Bevan, serif"
-    fontSize: "clamp(2rem, 7vw, 4.5rem)"
-    fontWeight: 400
-    lineHeight: 0.95
-    letterSpacing: "-0.01em"
-  title:
-    fontFamily: "Instrument Sans, sans-serif"
-    fontSize: "1.5rem"
-    fontWeight: 700
-    lineHeight: 1.2
+    note: "h1–h4 and .font-display. Sizes are set per-section (clamp/text-*), not a single fixed scale."
   body:
-    fontFamily: "Instrument Sans, sans-serif"
-    fontSize: "1.125rem"
+    fontFamily: "Work Sans, sans-serif"
     fontWeight: 400
-    lineHeight: 1.625
-  label:
-    fontFamily: "Instrument Sans, sans-serif"
+    lineHeight: 1.5
+  eyebrow:
+    fontFamily: "Work Sans, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 700
-    letterSpacing: "0.2em"
+    letterSpacing: "0.12em"
+    textTransform: uppercase
+    color: "{colors.terracota}"
 rounded:
-  sm: "2px"
-  full: "9999px"
+  card: "1.25rem"
+  pill: "9999px"
 spacing:
   gutter-mobile: "1.5rem"
   gutter-desktop: "2.5rem"
-  section-y-mobile: "6rem"
-  section-y-desktop: "8rem"
+  section-y: "5rem–6rem"
   container-max: "80rem"
 components:
-  button-primary:
-    backgroundColor: "{colors.rotthem-blue}"
+  btn2-primary:
+    backgroundColor: "{colors.brand}"
     textColor: "{colors.white}"
-    rounded: "{rounded.sm}"
-    padding: "16px 32px"
-  button-dark:
-    backgroundColor: "{colors.negro-horno}"
+    rounded: "{rounded.pill}"
+    padding: "0.9rem 1.75rem"
+  btn2-accent:
+    backgroundColor: "{colors.terracota}"
     textColor: "{colors.white}"
-    rounded: "{rounded.sm}"
-    padding: "16px 32px"
-  button-outline-white:
-    backgroundColor: "transparent"
-    textColor: "{colors.white}"
-    rounded: "{rounded.sm}"
-    padding: "16px 32px"
-  field:
+    rounded: "{rounded.pill}"
+  btn2-outline:
+    backgroundColor: transparent
+    borderColor: "{colors.ink}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pill}"
+  card-flat:
     backgroundColor: "{colors.white}"
-    textColor: "{colors.negro-horno}"
-    rounded: "{rounded.sm}"
-    padding: "14px 16px"
-  field-dark:
-    backgroundColor: "rgba(255,255,255,0.06)"
-    textColor: "{colors.white}"
-    rounded: "{rounded.sm}"
-    padding: "14px 16px"
+    border: "1px solid rgba(19,27,77,.1)"
+    rounded: "{rounded.card}"
+  card-media:
+    rounded: "{rounded.card}"
+    overlay: "linear-gradient(180deg, transparent 40%, rgba(19,27,77,.92) 100%)"
 ---
 
-# Design System: Rotthem Pizzas
+# Design System: Rotthem — Pizzas & more
 
 ## Overview
 
-**Creative North Star: "El Cartel de la Esquina"**
-
-Rotthem se lee como el cartel pintado a mano de una pizzería de barrio, no como una app. Tipografía Bevan en mayúsculas —una slab serif con raíz en la rotulación pintada a mano, gruesa y con carácter propio, no un "impact font" genérico— grita el nombre y las promesas ("ROTTHEM", "RESERVÁ TU MESA") con la contundencia de un cartel serigrafiado, no de un titular editorial ni de una landing hecha con IA. La franja a cuadros azul y blanco funciona como el borde de un toldo: divide secciones con la misma energía gráfica que separaría un mostrador del resto del local. Todo es plano y de bloques de color sólido; la única "textura" permitida es la fotografía real (el fuego, la masa, a Rafa) y el giro sutil de -2°/2° en insignias y hovers, el gesto que recuerda que esto lo hace una persona, no una máquina.
-
-Cálido sin caer en el cliché rústico-artesanal (nada de madera clara, tipografía script ni paleta crema de panadería boutique): el calor viene del contenido real (fotos, la voz en "vos", el nombre de Rafa) y del ámbar puntual, no de un fondo pastel. Alto contraste y energía de cartel callejero por encima de cualquier curaduría genérica tipo SaaS: nada de grillas de tarjetas idénticas con ícono+título+texto, nada de sombra suave por defecto.
-
-**Key Characteristics:**
-- Tipografía display en mayúsculas, slab serif gruesa con raíz en rotulación pintada a mano, sin sutileza.
-- Bloques de color plano (azul, negro-horno, blanco) en vez de gradientes o vidrio.
-- Franja a cuadros azul/blanco como único motivo decorativo recurrente, siempre como divisor.
-- Rotación de -2°/2° como firma de "hecho a mano", nunca decorativa fuera de insignias/hover.
-- Fotografía real como única fuente de textura y calidez.
+Rebuilt from a client-provided Figma export (`public/diseño/`) in August 2026, replacing the earlier "Cartel de la Esquina" wood-fire/amber system entirely. The new direction is calmer and more editorial: a marble/terracotta/blue palette, a serif display face (Bodoni Moda) paired with a clean grotesque (Work Sans), pill-shaped buttons, and rounded-corner cards — a step away from the old sharp-corner, high-contrast "street food" look.
 
 ## Colors
 
-Paleta restringida y funcional: un azul de marca que hace todo el trabajo de llamado a la acción, sin excepción ni siquiera para los puntos de contacto de WhatsApp, y un ámbar que aparece solo como acento puntual.
-
-### Primary
-- **Azul Rotthem** (#2F5FC4): el color de marca. Botones primarios, la franja a cuadros, el subrayado de nav-links activos, el "PIZZA." en el hero, foco de campos de formulario claros, selección de texto (`::selection`).
-
-### Secondary
-- **Ámbar Leña** (#F2A93B): acento cálido, deliberadamente raro. Aparece solo en el estado de foco de campos oscuros (formulario de Eventos), como contrapunto puntual al azul dominante. No es un color de fondo ni de botón.
-
-### Neutral
-- **Negro Horno** (#0A0E1A): fondo de secciones oscuras (hero, Eventos, Ubicación, CTA final) y color de texto principal sobre fondo blanco (`text-ink`). Todas las variantes de opacidad (ink/50 a ink/60) para texto secundario sobre blanco.
-- **Negro Carbón** (#070A12): un paso más oscuro que Negro Horno, reservado al footer. Marca el footer como el punto más denso de la página, no un fondo oscuro intercambiable con el resto.
-- **Blanco** (#FFFFFF): fondo de secciones claras (Carta, Reservas, Nosotros) y texto sobre fondo oscuro. Variantes de opacidad (white/30 a white/90) para jerarquía de texto sobre negro.
-
-### Named Rules
-**La Regla del Azul Único.** El azul de marca es el único color que actúa como llamado a la acción, sin excepciones: incluidos los puntos de contacto de WhatsApp (ícono mobile, botón flotante), que antes usaban el verde de marca de WhatsApp y ahora van en Azul Rotthem. Nunca se introduce un segundo color "de acción" compitiendo por atención; el ámbar es acento de estado, no CTA.
+- `--brand` (#2A42AB, "Azul Rotthem") — primary CTAs, links, section backgrounds.
+- `--ink` (#131B4D, "Azul tinta") — body text, dark section backgrounds (footer, quote blocks).
+- `--lino` (#5B74DB) — secondary accents on dark backgrounds.
+- `--niebla` (#E9EDFB, "Azul niebla") — light tinted section backgrounds, soft tags.
+- `--marmol` (#F5F1E8, "Mármol") — the default warm off-white page background (not pure white).
+- `--piedra` (#E8E2D3) — secondary warm neutral, used sparingly.
+- `--terracota` (#C8472F) — the accent color: eyebrows, active nav underline, secondary CTA buttons ("Pedí ahora," "Pedir por PedidosYa"), event tags.
+- `--gris` (#6E6A5E) — muted body copy on light backgrounds.
 
 ## Typography
 
-**Display Font:** Bevan (con serif de respaldo) — slab serif con raíz en rotulación pintada a mano, deliberadamente elegida para no sonar a "landing hecha con IA" (el par Anton/Inter que tenía el sitio antes es exactamente el tipo de elección genérica que un cliente reconoce y rechaza).
-**Body Font:** Instrument Sans (con sans-serif de respaldo), pesos 400 a 700
-
-**Character:** Bevan aporta la voz de cartel pintado a mano, con peso y textura propios en vez de la contundencia fría de un "impact font"; Instrument Sans en pesos medios a bold sostiene todo lo funcional (botones, formularios, cuerpo de texto) sin competir nunca en protagonismo con el display.
-
-### Hierarchy
-- **Display** (400, clamp(2.5rem, 16vw, 6rem), line-height 0.92): el H1 del hero. Único uso a esta escala.
-- **Headline** (400, clamp(2rem, 7vw, 4.5rem), line-height 0.95): títulos de sección (H2), siempre en mayúsculas, siempre Bevan.
-- **Title** (700, 1.5rem): subtítulos de tarjeta (nombres de pizza en Carta), cifras destacadas (horarios, "100%"), logo de navbar.
-- **Body** (400–500, 1.125rem, line-height 1.625): párrafos descriptivos, acotados a `max-w-md` / `max-w-sm` (≈ 40–65ch en la práctica, nunca ancho completo).
-- **Label** (700, 0.75rem, tracking 0.15em–0.3em, mayúsculas): texto de botón y el badge de ubicación del hero ("Fernando de la Mora · Paraguay"), que porta un dato real, no un rótulo de sección. Instrument Sans en bold, nunca Bevan.
-
-### Named Rules
-**La Regla de las Mayúsculas Ganadas.** Las mayúsculas se reservan a Display, Headline y Label (botones y el badge de ubicación). El cuerpo de texto nunca va en mayúsculas: a esta escala se vuelve ilegible y rompe el contraste entre "lo que grita" y "lo que explica".
-**La Regla del Heading Solo.** Ningún H2 de sección lleva un eyebrow uppercase encima nombrando la sección ("Eventos", "Reservas", etc.). El heading ya dice lo que hay que decir; un rótulo repetido en cada sección es ruido, no jerarquía. El único texto pequeño-uppercase-tracked que sobrevive es el badge de ubicación del hero, porque porta un dato real (dónde queda el local), no el nombre de la sección que el H2 ya nombra.
+- Headings (`h1`–`h4`, `.font-display`) use **Bodoni Moda**, a high-contrast serif — set per-section with `clamp()` or Tailwind text-size utilities rather than one fixed scale.
+- Body copy, buttons, nav, and labels use **Work Sans**.
+- `.eyebrow` is the small uppercase terracota label that precedes almost every section heading ("LA HISTORIA", "LA CARTA", "PRÓXIMOS EVENTOS" etc.) — a load-bearing pattern, keep it on new sections.
+- `.quote-serif` is Bodoni Moda italic, used for pull-quotes and the footer tagline.
 
 ## Layout
 
-Contenedor único `max-w-7xl` (80rem) centrado, con gutter de 1.5rem en mobile y 2.5rem desde `md`. El ritmo vertical entre secciones es generoso y consistente: `py-24` (6rem) en mobile, `py-32` (8rem) en desktop para la mayoría de secciones, con variantes puntuales más altas (`py-40`/`py-56`) reservadas al CTA final para que se sienta como un cierre, no una sección más.
-
-La grilla es de una o dos columnas casi siempre (`grid-cols-1` → `md:grid-cols-3` en Carta, `lg:grid-cols-2` en Eventos/Reservas/Nosotros/Ubicación), nunca más de tres columnas simultáneas. El orden de columnas se invierte deliberadamente en mobile vs. desktop (`order-1`/`order-2` + `lg:order-*`) para que la imagen o el formulario lidere según el dispositivo, no según el marcado.
-
-Breakpoints estándar de Tailwind: `sm` 640px, `md` 768px, `lg` 1024px.
-
-## Elevation & Depth
-
-El sistema es plano en su gran mayoría: navbar, tarjetas de menú, campos de formulario y bloques de estadística no llevan sombra en reposo. La profundidad se comunica con superposición de bloques de color y con la rotación de -2°/2°, no con `box-shadow`.
-
-La sombra existe hoy en tres puntos puntuales, todos ligados a estado o flotación, nunca a reposo: el navbar gana una sombra suave al hacer scroll (`#nav.scrolled`), el botón primario gana sombra en hover, y el botón flotante de WhatsApp lleva una sombra ambiente constante porque flota sobre el contenido. Esto no es una prohibición cerrada: el sistema puede incorporar más sombra a futuro si un componente lo justifica: la regla actual es que la sombra se gana por estado o por necesidad de flotar, no que esté vetada.
+- Page background defaults to `--marmol`, not white; alternating sections switch to `--niebla`, `--ink`, or `--brand` for rhythm (see any page for the pattern: marmol → niebla → ink → marmol → brand).
+- Nav (`#nav2`) is `position: sticky`, always on a `--marmol` background — it does not float transparently over a hero like the previous design; it's a permanently visible bar with a shadow once scrolled.
+- Container max-width is `max-w-7xl` (80rem) with `px-6 md:px-10` gutters.
 
 ## Shapes
 
-Dos radios, sin puntos intermedios: `2px` (`rounded-sm`, prácticamente recto) para todo bloque rectangular —botones, tarjetas, campos, badges rectangulares— y `9999px` (`rounded-full`) exclusivamente para círculos y píldoras —el botón de WhatsApp, el badge giratorio, el ícono mobile, la franja de "eyebrow" con borde—. Bordes de 2px de grosor en botones outline, campos y badges reforzados dan al sistema un trazo grueso y gráfico, consistente con la tipografía display.
-
-La franja "checker" (conic-gradient de cuadros azul/blanco) es la forma decorativa recurrente del sistema; el menú mobile se revela con un `clip-path: circle()` que crece desde el botón de menú, el único uso de una forma no rectangular/circular como mecanismo de interacción.
+- Buttons (`.btn2*`) are fully pill-shaped (`border-radius: 9999px`).
+- Cards (`.card-flat`, `.card-soft`, `.card-media`) use a consistent `1.25rem` corner radius.
+- Tags/badges (`.tag-solid`, `.tag-soft`, `.chip-outline`, `.pill-badge`, `.filter-pill`) are all pill-shaped too — there is no sharp-corner tag variant in this system, unlike the previous design.
 
 ## Components
 
-### Buttons
-- **Shape:** `rounded-sm` (2px), nunca `rounded-full` en botones rectangulares.
-- **Primary (`btn-brand`):** fondo Azul Rotthem, texto blanco, padding 16px/32px (`px-8 py-4`), texto label (bold, uppercase, tracking ancho).
-- **Dark (`btn-dark`):** fondo Negro Horno, texto blanco; usado como CTA secundario sobre fondo claro (ej. "Ver carta completa por WhatsApp").
-- **Outline blanco (`btn-outline-w`):** borde blanco de 2px, fondo transparente, texto blanco; usado sobre imagen/fondo oscuro (hero).
-- **Hover/Focus:** el primario se eleva 2px, gira -0.5° y gana sombra azul difusa; el dark se eleva 2px y cambia a Azul Rotthem; el outline blanco invierte a fondo blanco/texto negro.
-- Existe una variante `btn-outline-b` (borde negro, mismo patrón que la blanca) definida en CSS pero sin uso actual en el marcado; queda disponible para fondos claros que necesiten un CTA terciario.
-
-### Fields
-- **Style (claro):** fondo blanco, borde 2px `#E4E7EF`, `rounded-sm`.
-- **Style (oscuro, `field-dark`):** fondo blanco al 6% de opacidad, borde blanco al 18%, texto blanco, placeholder blanco al 40%.
-- **Focus:** el campo claro resalta el borde en Azul Rotthem con halo suave; el oscuro resalta en Ámbar Leña (el único lugar del sistema donde el ámbar aparece) y aclara levemente el fondo.
-- **Error:** animación `shake` (400ms) + borde rojo (`#E24444`) cuando falta el campo obligatorio.
-
-### Menu Card
-- **Corner Style:** `rounded-sm`, overflow oculto.
-- **Background:** foto a sangre con overlay degradado (transparente → Negro Horno al 85%) para legibilidad del texto inferior.
-- **Contenido:** un pill "Ver detalle →" fijo (no solo al hover) arriba a la izquierda, sobre fondo `bg-ink/75` para que se lea contra cualquier foto — deja explícito que la tarjeta lleva a otra página, no que es solo informativa. Nombre (Title, Bevan) y precio (mismo tratamiento, Azul Rotthem) en una línea abajo; descripción corta debajo.
-- **Hover:** la tarjeta se eleva y gira -0.6°, la imagen escala 1.08 y gira 0.8° dentro del recorte; textura "hecha a mano" vía movimiento, no vía sombra.
-- **Navegación:** cada tarjeta es un `Link` a `/carta/:slug` (el detalle de esa pizza, con ingredientes y el botón real de WhatsApp), no un link directo a WhatsApp. La home (`Carta.jsx`, sección "Hecha a la leña") muestra 3 tarjetas con un botón "Ver más de la carta" que lleva a `/carta`, la página completa con las 5.
-- **Fotografía repetida:** con solo 3 fotos reales de pizza disponibles para 5 ítems del menú, dos tarjetas reutilizan la foto de otra. Es una decisión consciente (evitar stock genérico) mientras no haya más fotos reales; actualizar cuando estén disponibles.
-
-### Carta Page Intro (signature)
-La página `/carta` no arranca en seco con el título sobre fondo plano: primero una franja checker (apenas termina el espacio del nav fijo), después una banda con una de las fotos reales de fondo al 25% de opacidad + el mismo degradado que usa Eventos, título centrado en Display. Existe para que la página se sienta como un destino propio, no como una sección más — el mismo motivo por el que el nav ilumina "Carta" en azul con subrayado fijo mientras estás en `/carta` o en el detalle de una pizza (ver Navigation).
-
-### Navigation
-- **Logo:** el ícono de marca (David de Miguel Ángel con una pizza a la leña de fondo, a modo de halo) junto al wordmark "ROTTH**E**M", en navbar y footer. Es un activo real, no un ícono genérico de reemplazo.
-- **Desktop:** barra fija, transparente sobre el hero, gana fondo blanco translúcido + blur + sombra suave al hacer scroll (`#nav.scrolled`); los links cambian de blanco a negro-horno en el mismo punto. Subrayado azul animado en hover (`nav-link::after`).
-- **Estado activo:** "Carta" es el único link del nav que navega a una página real (`/carta`) en vez de hacer scroll dentro de la home; por eso es el único que lleva estado activo — Azul Rotthem fijo + el mismo subrayado del hover, pero permanente (`.nav-link.active::after`) — mientras estás en `/carta` o en el detalle de una pizza. Los demás links (Eventos, Reservas, Delivery, Nosotros, Ubicación) nunca llevan estado activo porque son anclas, no rutas.
-- **Mobile:** botón hamburguesa circular de borde blanco/negro (según scroll) que se transforma en X; el menú se revela a pantalla completa con `clip-path: circle()` creciendo desde el botón, fondo Negro Horno, links en Bevan mayúscula.
-
-### Checker Strip (signature)
-Franja de 16px de alto con `conic-gradient` a cuadros azul/blanco (o blanco/azul invertido sobre fondo oscuro). Aparece solo como divisor entre secciones mayores, nunca como fondo decorativo de un bloque de contenido.
-
-### WhatsApp Float (signature)
-Botón circular en Azul Rotthem (60px, antes verde WhatsApp), fijo en la esquina inferior derecha, oculto hasta pasar los 400px de scroll y luego animado con fade + scale. Es el único elemento persistente en pantalla fuera del navbar.
-
-### Badge Spin (signature)
-Sello circular con texto curvo ("TRADICIONAL · NAPOLITANA · PARAGUAY") en rotación continua de 18s, con un punto azul sólido en el centro. Aparece una sola vez, en la sección Nosotros, como firma editorial puntual, no como recurso repetible.
+- **Buttons**: `.btn2-primary` (brand blue), `.btn2-accent` (terracota — used for delivery/order actions specifically), `.btn2-outline` / `.btn2-outline-light`, `.btn2-white` / `.btn2-cream`. All lift 2px on hover.
+- **Cards**: `.card-media` (full-bleed photo + bottom gradient + white text, used for the Home "elegí tu momento" hub and gallery), `.card-flat` (white card with border, used for info/pricing/step cards), `.card-soft` (niebla-tinted card).
+- **Icon circle**: `.icon-circle` — a small niebla (or terracota-tinted `.icon-circle-accent`) circle behind a linear icon, used on Historia's "El camino" cards, Eventos' type cards, and info rows.
+- **Date box**: `.date-box` — the square date badge used on `/agenda`'s event list.
+- **Forms**: `.form2-field` (marmol background, brand focus ring) and `.form2-motivo` (pill toggle group), used on `/contacto`.
+- Icons are hand-rolled inline SVGs in `src/components/Icons.jsx` — stroke-based, `currentColor`, no icon library dependency.
 
 ## Do's and Don'ts
 
-### Do:
-- **Do** usar Bevan solo en mayúsculas para Display, Headline y logo; nunca para cuerpo de texto.
-- **Do** mantener el azul de marca como único color de llamado a la acción; el ámbar es acento de foco, no CTA.
-- **Do** usar la franja checker únicamente como divisor entre secciones, nunca como fondo de contenido.
-- **Do** limitar la rotación decorativa a -2°/2° y solo en insignias, tarjetas en hover y botones en hover; es la única fuente de "imperfección hecha a mano" del sistema.
-- **Do** usar fotografía real del negocio (Rafa, el local, las pizzas) como única fuente de textura; nunca stock genérico.
-- **Do** dejar que el H2 de cada sección cargue solo su propio peso, sin eyebrow encima.
+- **Do** keep `.eyebrow` labels above section headings — it's the single most repeated pattern across all 8 pages of the source Figma.
+- **Do** use terracota specifically for order/delivery-flavored CTAs and brand blue for everything else; the two are not interchangeable.
+- **Do** treat `--marmol` as the true page background; don't default new sections to pure white.
+- **Don't** reintroduce sharp corners, the old amber (`#F2A93B`) accent, or Bevan/Instrument Sans — those belong to the retired design.
+- **Don't** add a floating/transparent nav — this system's nav is a solid, sticky bar.
+- **Don't** rely on bare Tailwind utility classes assuming they're globally available without checking — see `README.md` / the Tailwind Vite plugin note below.
 
-### Don't:
-- **Don't** agregar un eyebrow/kicker uppercase repitiendo el nombre de la sección arriba de un H2, bajo ninguna circunstancia.
-- **Don't** introducir un segundo color de acción compitiendo con el Azul Rotthem.
-- **Don't** usar verde u otro color de acción fuera del Azul Rotthem; los puntos de contacto de WhatsApp también van en azul.
-- **Don't** aplicar `rounded-full` a elementos rectangulares ni radios intermedios (8px, 12px, etc.): el sistema es binario entre 2px y círculo completo.
-- **Don't** caer en grillas de tarjetas idénticas con ícono+título+texto ni en sombra suave por defecto tipo SaaS.
-- **Don't** derivar hacia la estética rústico-artesanal genérica (madera clara, script, paleta crema) que el proyecto descartó explícitamente.
+## Build note
+
+This project now compiles Tailwind live via `@tailwindcss/vite` (added during the August 2026 rebuild) — `src/index.css` starts with `@import "tailwindcss";` followed by the custom component classes documented above. Earlier in this project's history there was no live compiler, only a static extracted CSS bundle; that constraint no longer applies, but the custom `.btn2-*` / `.card-*` / `.tag-*` component-class system above should still be preferred over ad-hoc utility chains for anything reused across pages.

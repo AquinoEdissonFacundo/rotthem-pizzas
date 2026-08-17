@@ -2,8 +2,13 @@ import { useEffect, useLayoutEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import Carta from "./pages/Carta";
-import CartaDetail from "./pages/CartaDetail";
+import Historia from "./pages/Historia";
+import Local from "./pages/Local";
+import Eventos from "./pages/Eventos";
+import Delivery from "./pages/Delivery";
+import Agenda from "./pages/Agenda";
+import Galeria from "./pages/Galeria";
+import Contacto from "./pages/Contacto";
 
 function useAnchorSmoothScroll() {
   useEffect(() => {
@@ -27,11 +32,6 @@ function useAnchorSmoothScroll() {
 function useScrollToTopOnNavigate() {
   const location = useLocation();
   useLayoutEffect(() => {
-    // A hash means Home's own #anchor effect owns the landing spot.
-    // Reset before the outgoing page's exit animation plays (not after,
-    // via onExitComplete) so the browser never gets a chance to clamp
-    // scrollY when a much shorter page mounts under a tall scroll offset --
-    // that clamp is what landed users mid-page instead of at the top.
     if (!location.hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location.pathname]);
 }
@@ -44,8 +44,13 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/carta" element={<Carta />} />
-        <Route path="/carta/:slug" element={<CartaDetail />} />
+        <Route path="/historia" element={<Historia />} />
+        <Route path="/local" element={<Local />} />
+        <Route path="/eventos" element={<Eventos />} />
+        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/agenda" element={<Agenda />} />
+        <Route path="/galeria" element={<Galeria />} />
+        <Route path="/contacto" element={<Contacto />} />
       </Route>
     </Routes>
   );

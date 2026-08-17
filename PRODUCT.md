@@ -10,53 +10,53 @@ web
 
 Four confirmed audiences, all converting through the same WhatsApp funnel:
 
-- Locals in Fernando de la Mora / Asunción deciding where to eat tonight, browsing the menu before reserving a table or ordering delivery.
-- Families and friend groups organizing a get-together, checking hours and location before heading over.
-- Event organizers (birthdays, weddings, corporate events) requesting a Pizza Corrida quote.
-- Repeat customers who already know Rotthem and go straight to ordering delivery by WhatsApp.
+- People deciding where to eat once the Asunción local opens, browsing the menu before reserving a table.
+- Delivery customers ordering tonight, via WhatsApp or PedidosYa.
+- Event organizers (birthdays, corporate events, weddings) requesting a pizza-libre quote for 20–90 guests.
+- Feria-goers who know Rotthem from Palmear, San Juan, or Pilar and want to know where the stand shows up next.
 
 ## Product Purpose
 
-A storefront for Rotthem Pizzas, a real wood-fired Neapolitan pizzeria in Fernando de la Mora, Paraguay. The site's only job is converting visits into a WhatsApp conversation: a table reservation, a delivery order, or an event quote. Success is measured in WhatsApp clicks, not on-site checkout. The main landing page (`/`) carries the full sales narrative; the menu (`/carta` and `/carta/:slug`) is a dedicated set of pages so each item can be linked and browsed on its own.
+A storefront for Rotthem — Pizzas & more, a real Neapolitan pizzeria founded by Rafa Toloza, currently operating through delivery, private events, and street fairs (ferias) while its first sit-down local in Asunción is under construction. The site's job is converting visits into a WhatsApp conversation (delivery order, event quote, table reservation for the coming local) or a PedidosYa order. Success is measured in WhatsApp/PedidosYa clicks, not on-site checkout.
 
 ## Positioning
 
-Two differentiators, held with equal weight, neither subordinate to the other:
-
-- Authentic wood-fired Neapolitan pizza: long-fermentation dough, real wood fire, hand-thrown by Rafa.
-- Pizza Corrida served live at events: Rotthem brings the oven and serves fresh pizza in front of guests, a format nearby pizzerias don't offer.
+- Real Neapolitan technique: 48-hour fermented dough, Italian tomato, live fire — not a generic "artisanal" claim.
+- A founder-led brand with a real, specific story (Rafa Toloza, Pilar → Mancusi Pizza Napolitana → Rotthem), not an anonymous storefront.
+- Community presence: Rotthem shows up physically — ferias (Palmear monthly, San Juan, solidarity events, trips back to Pilar) — before it has a fixed address.
 
 ## Operating Context
 
-- WhatsApp is the entire transaction layer. There is no cart, checkout, or payment processing on-site; every CTA (menu, reservation, event quote, delivery) opens a pre-filled WhatsApp message to +595 974 962 373.
-- Physical location: Confuso esq. Muñoz, Fernando de la Mora, Paraguay, next to Black House Tattoo.
-- Hours: daily 19:00–23:30 (posted as reference; may vary).
-- Presence on Instagram (@rotthempizzas) and Google Maps.
+- WhatsApp (+595 974 962 373) and PedidosYa ("Rotthem Pizza") are the transaction layer. There is no cart or on-site payment; every CTA opens a pre-filled WhatsApp message or the PedidosYa app/site.
+- **The Asunción local (Capitán Pedro Carpinelli, entre Av. Choferes del Chaco y Guillermo Saraví) has not opened yet** — it is marked "Próximamente" everywhere on the site. Do not present it as open or give it fixed hours; hours are "a confirmar."
+- Delivery operates now: Tuesday–Sunday, 19:00–23:00, around Av. Choferes del Chaco and nearby Asunción.
+- Instagram: @rotthempizzas. Email: hola@rotthem.com.py.
+- Ferias are a recurring, real part of the business (not a one-off promo): Palmear is a monthly fixed point; Rotthem also travels back to Pilar, the founder's hometown.
 
 ## Capabilities and Constraints
 
-- Static marketing site, no backend, client-side routed (React Router: `/`, `/carta`, `/carta/:slug`). The reservation and event forms only validate that a name was entered, then compose a WhatsApp deep link; nothing is persisted server-side.
-- Menu pricing is decided and published: the home page previews 3 items, `/carta` lists all of them, and each has its own detail page. Prices are rounded to whole-menu numbers for display, not the exact figures from the internal costing sheet. Ordering itself still has no cart; clicking a menu item opens WhatsApp with that item pre-filled.
+- Static marketing site, no backend, client-side routed (React Router): `/`, `/historia`, `/local`, `/eventos`, `/delivery`, `/agenda`, `/galeria`, `/contacto`. The contact form composes a WhatsApp deep link with the entered fields; nothing is persisted server-side.
+- Menu is published and final for now: 11 pizzas + Calzoni (3 varieties sold as one menu line), prices in guaraníes. Sourced from the real printed menu (`public/diseño/images/menu-1.jpg`) — treat that photo as the authority if a description ever needs re-checking.
+- The Google Maps embed and the live Instagram feed are both placeholders on the current build (cards say "en la web publicada, acá se embebe...") — wiring those up is a known follow-up, not a bug.
 
 ## Brand Commitments
 
-- Name: Rotthem (stylized ROTTHEM in display type).
-- Founder and pizzero Rafa is named explicitly as the face of the brand ("Rafa · Fundador & pizzero"); he is a real person, not a placeholder persona.
-- Hero identity block (current, replaced the earlier "El arte de hacer pizza." / "No es solo pizza." headlines): "ROTTHEM" as the display title, "Pizza Napolitana" as descriptor, "Fatte a Mano" as an italicized Italian motto ("made by hand"). Leans into the brand's Neapolitan/Italian heritage directly through language rather than through visual clichés. Hero CTAs are "Ver la carta" and "Conocé Rotthem" (→ Nosotros), not a reservation-first framing.
-- Logo mark: a real asset (`public/assets/images/logo-mark.png`), Michelangelo's David composited in front of a wood-fired pizza like a halo. Used alongside the ROTTHEM wordmark in the navbar and footer; not a placeholder, don't swap for a generic icon.
-- Voice: direct, warm, colloquial Paraguayan Spanish ("vos" register), matching how a neighborhood pizzeria actually talks to its customers.
+- Name: Rotthem — Pizzas & more. Wordmark logo (arched "ROTTHEM PIZZAS" lockup) at `public/assets/images/Logo Rotthem.png` (navy, for light backgrounds) and `Logo Rotthem - Blanco.png` (white, for dark backgrounds/footer). This is the real client logo — never swap it for a generic mark.
+- Founder Rafa Toloza is named explicitly and has a full, real origin story (see `/historia`): grew up in Pilar, pushed toward medicine, escaped into drumming, found his calling in his family's kitchen, studied at IGA Asunción, co-founded an earlier venture (Mancusi Pizza Napolitana) before starting Rotthem alone. This story is not to be shortened into a generic "passionate chef" bio.
+- Visual system (rebuilt from the client-provided Figma in `public/diseño/`): palette is Mármol/Terracota/Azules (`--brand #2A42AB`, `--ink #131B4D`, `--terracota #C8472F`, `--marmol #F5F1E8`, `--niebla #E9EDFB`); typography is Bodoni Moda (headings) + Work Sans (body); buttons and cards are pill-shaped / rounded, not the earlier sharp-cornered system.
+- Voice: warm, direct Paraguayan Spanish ("vos" register), first-person from Rafa on `/historia`.
 
 ## Evidence on Hand
 
-- 9 real photographs already in use (Rafa working the dough, finished pizzas, live event service, the storefront) at `public/assets/images/img-1.jpg` through `img-9.jpg`. These are real business photos, not stock, and should not be swapped for generic imagery.
-- Real contact details: WhatsApp +595 974 962 373; address Confuso esq. Muñoz, Fernando de la Mora, next to Black House Tattoo; hours 19:00–23:30 daily (reference, may vary); Instagram @rotthempizzas; a Google Maps listing.
-- Real menu: Muzzarela (Gs. 60.000), Napolitana (Gs. 70.000), Peperoni (Gs. 60.000), Vegetariana (Gs. 55.000), Cuatro Quesos (Gs. 50.000). Prices are rounded from the owner's internal costing sheet (exact figures and ingredient-level costs are not published; only the customer-facing rounded price and a short ingredient description per item).
-- Absent, and not to be fabricated by future work: customer testimonials/reviews, press mentions, usage stats, or any menu item beyond the five listed above.
+- Real photography at `public/assets/images/` (Rafa working, finished pizzas, delivery hand-offs, feria shots, the printed menu) — sourced from the client's own Figma export, not stock.
+- Real contact details: WhatsApp +595 974 962 373; email hola@rotthem.com.py; Instagram @rotthempizzas; PedidosYa listing "Rotthem Pizza"; future address Capitán Pedro Carpinelli, Asunción (unopened).
+- Real, dated near-term events (as of the current build): Feria Palmear (22 Ago), Feria de San Juan (05 Sep, Cabildo de Asunción), a solidarity pizza day (20 Sep), and a return trip to Pilar (17 Oct). These are real commitments, not filler — update or remove them once they've passed rather than leaving stale dates live.
+- Absent, and not to be fabricated: customer testimonials/reviews, press mentions, usage stats beyond what's already stated ("2 años de horno," "más de 5.000 seguidores").
 
 ## Product Principles
 
-1. Every path on the page funnels to a WhatsApp conversation — WhatsApp is the transaction layer, not an optional contact channel.
-2. The two differentiators (wood-fired craft, live-served Pizza Corrida) get equal narrative weight; the page never lets one eclipse the other.
-3. Real evidence only. Real photos, real contact details, real founder story. No fabricated reviews, prices, or stats.
-4. One page serves four distinct intents (walk-in diners, groups, event organizers, repeat delivery customers) without forcing them to compete for the same slot: the hero now opens with brand/identity framing ("Conocé Rotthem" → Nosotros, "Ver la carta" → menu) rather than reservation-first, while dedicated Reservas, Eventos, and Delivery sections carry their own specific intents further down the page.
-5. Voice stays Paraguayan and conversational ("vos"), never generic marketing English-translated Spanish.
+1. Every path funnels to WhatsApp or PedidosYa — there is no other transaction layer.
+2. Never imply the Asunción local is open. "Próximamente" is load-bearing copy, not a placeholder to be cleaned up later.
+3. Real evidence only: real photos, real founder story, real events with real dates. No fabricated reviews, prices, or stats.
+4. The founder's story is a core asset, not filler — `/historia` should stay in Rafa's voice and keep the specific, non-generic details (Pilar, medicine, la batería, IGA, Mancusi).
+5. Voice stays Paraguayan and conversational ("vos"), never generic marketing Spanish.
