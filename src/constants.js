@@ -11,3 +11,13 @@ export const ADDRESS_FULL =
 export function waLink(text) {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
 }
+
+// Google Sheets "publish to web" CSV links, so the client can edit the
+// menu and the agenda from a spreadsheet without a backend or a redeploy.
+// Leave empty to keep using the hardcoded fallback data in src/data/.
+// Setup: Google Sheets → File → Share → Publish to web → pick the sheet
+// tab → CSV → copy the generated link here.
+export const PIZZAS_SHEET_CSV_URL =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_QtuoTkP88mD9Etrzc5dU2hgYH-S9Ba9AO_2Qgz7uF6YlF2cbeeq4CTtor7hOewgBdu9KHrSFalvs/pub?gid=0&single=true&output=csv";
+export const EVENTOS_SHEET_CSV_URL =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_QtuoTkP88mD9Etrzc5dU2hgYH-S9Ba9AO_2Qgz7uF6YlF2cbeeq4CTtor7hOewgBdu9KHrSFalvs/pub?gid=1734278&single=true&output=csv";

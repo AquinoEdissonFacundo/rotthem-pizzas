@@ -1,33 +1,12 @@
 import PageTransition from "../components/PageTransition";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useEventos, tagClassFor } from "../data/eventos";
 import { waLink } from "../constants";
 import { IconPin } from "../components/Icons";
 
-const eventos = [
-  {
-    date: "22", month: "AGO", title: "Feria Palmear", tag: "Feria", tagClass: "tag-brand",
-    desc: "Nuestro punto fijo de siempre. Stand con horno en vivo, carta completa y merch de Rotthem.",
-    day: "Sábado", place: "Palmear, Asunción",
-  },
-  {
-    date: "05", month: "SEP", title: "Feria de San Juan", tag: "Feria", tagClass: "tag-brand",
-    desc: "Pizza napolitana entre tradición paraguaya, en el patio del Cabildo.",
-    day: "Sábado", place: "Cabildo de Asunción",
-  },
-  {
-    date: "20", month: "SEP", title: "Jornada solidaria", tag: "Solidario", tagClass: "tag-accent",
-    desc: "Pizzas a beneficio: lo recaudado se dona para niños. Sumate comiendo rico.",
-    day: "Domingo", place: "Asunción",
-  },
-  {
-    date: "17", month: "OCT", title: "Rotthem en Pilar", tag: "Viaje", tagClass: "tag-brand",
-    desc: "Volvemos a Pilar, donde nos conocen desde el primer día. Dos días de stand.",
-    day: "Fin de semana", place: "Pilar",
-  },
-];
-
 export default function Agenda() {
   useScrollReveal();
+  const eventos = useEventos();
 
   return (
     <PageTransition>
@@ -52,7 +31,7 @@ export default function Agenda() {
               <div className="flex-1">
                 <div className="flex items-center gap-2 flex-wrap mb-1">
                   <h3 className="font-display text-xl">{e.title}</h3>
-                  <span className={`tag-solid ${e.tagClass}`}>{e.tag}</span>
+                  <span className={`tag-solid ${tagClassFor(e.cat)}`}>{e.cat}</span>
                 </div>
                 <p className="text-sm" style={{ color: "var(--gris)" }}>{e.desc}</p>
               </div>

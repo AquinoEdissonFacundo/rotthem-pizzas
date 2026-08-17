@@ -1,17 +1,16 @@
 import PageTransition from "../components/PageTransition";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { PIZZAS, CALZONI, formatGs } from "../data/pizzas";
+import { useMenu, formatGs } from "../data/pizzas";
 import { waLink, WA_DISPLAY, ADDRESS_SHORT, PEDIDOSYA_URL } from "../constants";
 import { IconMessage, IconBike, IconMap, IconClock, IconFlame } from "../components/Icons";
-
-const menuRows = [...PIZZAS, { ...CALZONI, slug: "calzoni" }];
-const col1 = menuRows.slice(0, 6);
-const col2 = menuRows.slice(6);
 
 const ORDER_TEXT = "Hola! Quiero hacer un pedido en Rotthem 🍕";
 
 export default function Delivery() {
   useScrollReveal();
+  const menuRows = useMenu();
+  const col1 = menuRows.slice(0, Math.ceil(menuRows.length / 2));
+  const col2 = menuRows.slice(Math.ceil(menuRows.length / 2));
 
   return (
     <PageTransition>
@@ -84,7 +83,7 @@ export default function Delivery() {
       <section className="section-marmol px-6 md:px-10 py-20 md:py-24">
         <div className="max-w-5xl mx-auto">
           <span className="eyebrow">La carta</span>
-          <h2 className="text-3xl md:text-4xl mb-10">Once pizzas, una masa perfecta.</h2>
+          <h2 className="text-3xl md:text-4xl mb-10">Nuestra carta, una masa perfecta.</h2>
 
           <div className="grid md:grid-cols-2 gap-x-12">
             {[col1, col2].map((col, i) => (

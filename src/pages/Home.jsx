@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import PageTransition from "../components/PageTransition";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useEventos } from "../data/eventos";
 import { waLink, INSTAGRAM_HANDLE, INSTAGRAM_URL, ADDRESS_FULL } from "../constants";
 import { IconPin, IconClock, IconChair } from "../components/Icons";
 
@@ -35,16 +36,11 @@ const cards = [
   },
 ];
 
-const eventos = [
-  { day: "SÁB", date: "22 AGO", title: "Feria Palmear", place: "Stand Rotthem — todo el día", city: "Asunción" },
-  { day: "SÁB", date: "05 SEP", title: "Feria de San Juan", place: "Cabildo de Asunción", city: "Centro" },
-  { day: "DOM", date: "20 SEP", title: "Jornada solidaria", place: "Pizza a beneficio — donaciones para niños", city: "Asunción" },
-];
-
 const igShots = ["pizza-entrando-horno.jpg", "rafa-salsa.jpg", "rafa-trabajando.jpg", "rafa-queso.jpg"];
 
 export default function Home() {
   useScrollReveal();
+  const eventos = useEventos().slice(0, 3);
 
   return (
     <PageTransition>
@@ -135,15 +131,17 @@ export default function Home() {
 
           <div className="flex flex-col divide-y divide-white/10 border-t border-b border-white/10">
             {eventos.map((e) => (
-              <div key={e.title} className="flex items-center justify-between gap-4 py-5">
+              <div key={e.title + e.date} className="flex items-center justify-between gap-4 py-5">
                 <div className="flex items-center gap-4 md:gap-8">
-                  <span className="text-xs font-bold tracking-widest" style={{ color: "var(--terracota)" }}>{e.day} {e.date}</span>
+                  <span className="text-xs font-bold tracking-widest" style={{ color: "var(--terracota)" }}>
+                    {e.day.slice(0, 3).toUpperCase()} {e.date} {e.month}
+                  </span>
                   <div>
                     <div className="text-white font-display text-lg">{e.title}</div>
-                    <div className="text-white/50 text-sm">{e.place}</div>
+                    <div className="text-white/50 text-sm">{e.desc}</div>
                   </div>
                 </div>
-                <span className="text-white/50 text-sm hidden sm:block">{e.city}</span>
+                <span className="text-white/50 text-sm hidden sm:block">{e.place}</span>
               </div>
             ))}
           </div>
