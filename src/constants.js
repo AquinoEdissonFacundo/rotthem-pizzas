@@ -1,6 +1,6 @@
 export const WA_NUMBER = "595974962373";
 export const WA_DISPLAY = "0974 962 373";
-export const EMAIL = "hola@rotthem.com.py";
+export const EMAIL = "rotthempizzas@gmail.com";
 export const INSTAGRAM_HANDLE = "@rotthempizzas";
 export const INSTAGRAM_URL = "https://www.instagram.com/rotthempizzas";
 export const PEDIDOSYA_URL = "https://www.pedidosya.com.py";
