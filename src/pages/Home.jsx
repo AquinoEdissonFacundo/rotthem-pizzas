@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageTransition from "../components/PageTransition";
 import { useScrollReveal } from "../hooks/useScrollReveal";
@@ -41,6 +42,9 @@ const igShots = ["pizza-entrando-horno.webp", "rafa-salsa.webp", "rafa-trabajand
 export default function Home() {
   useScrollReveal();
   const eventos = useEventos().slice(0, 3);
+  const [videoOk, setVideoOk] = useState(
+    () => typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
 
   return (
     <PageTransition>
@@ -51,6 +55,21 @@ export default function Home() {
           alt="Rafa, fundador de Rotthem, en la cocina"
           className="absolute inset-0 w-full h-full object-cover"
         />
+        {videoOk && (
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            onError={() => setVideoOk(false)}
+          >
+            <source src="/videohero.webm" type="video/webm" />
+            <source src="/videohero.mp4" type="video/mp4" />
+          </video>
+        )}
         <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(19,27,77,.88) 0%, rgba(19,27,77,.55) 45%, rgba(19,27,77,.15) 75%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
           <div className="max-w-xl">
